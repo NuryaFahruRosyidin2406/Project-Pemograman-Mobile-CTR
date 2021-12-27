@@ -5,6 +5,13 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from './src/pages/Login';
 import MenuLogin from './src/pages/MenuLogin';
 import MenuKomik from './src/pages/MenuKomik';
+import MenuLatest from './src/pages/MenuLatest';
+import MenuDeskripsi from './src/pages/MenuDeskripsi';
+import MenuBaca from './src/pages/MenuBaca';
+import MenuFavorite from './src/pages/MenuFavorite';
+import MenuRecent from './src/pages/MenuRecent';
+import MenuDownload from './src/pages/MenuDownload';
+import MenuAccount from './src/pages/MenuAccount';
 
 const Stack = createNativeStackNavigator();
 
