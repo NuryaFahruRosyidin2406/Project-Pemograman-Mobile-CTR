@@ -18,6 +18,9 @@ import MenuAccount from './src/pages/MenuAccount';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
+test;
+test2;
+
 function App({navigation}) {
   return (
     <NavigationContainer>
