@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 const MenuRecent = ({navigation}) => {
   return (
     <View>
-      <Text></Text>
+      <Text>Ini Menu Recent</Text>
     </View>
   );
 };

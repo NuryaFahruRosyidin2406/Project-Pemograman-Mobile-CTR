@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 const MenuDownload = ({navigation}) => {
   return (
     <View>
-      <Text></Text>
+      <Text>Ini Menu Download</Text>
     </View>
   );
 };

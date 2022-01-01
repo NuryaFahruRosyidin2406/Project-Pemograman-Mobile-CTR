@@ -8,7 +8,7 @@ import {
   ImageBackground,
 } from 'react-native';
 
-const MenuKomik = ({navigation}) => {
+const MenuHome = ({navigation}) => {
   return (
     <View style={{flex: 1, backgroundColor: '#FFFFFF'}}>
       <View
@@ -128,7 +128,7 @@ const MenuKomik = ({navigation}) => {
         </View>
       </ScrollView>
 
-      <View
+      {/* <View
         style={{
           backgroundColor: 'white',
           paddingVertical: 20,
@@ -217,11 +217,11 @@ const MenuKomik = ({navigation}) => {
             Account
           </Text>
         </View>
-      </View>
+      </View> */}
     </View>
   );
 };
 
-export default MenuKomik;
+export default MenuHome;
 
 const styles = StyleSheet.create({});

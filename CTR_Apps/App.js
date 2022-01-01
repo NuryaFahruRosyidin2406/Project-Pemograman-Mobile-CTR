@@ -1,12 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Button, Text, View, color} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome'; //import icon from 'react-native-vector-icons/FontAwesome';, FontAwesome bisa diganti
 import Login from './src/pages/Login';
 import MenuLogin from './src/pages/MenuLogin';
-import MenuKomik from './src/pages/MenuKomik';
+import MenuHome from './src/pages/MenuHome';
 import MenuLatest from './src/pages/MenuLatest';
 import MenuDeskripsi from './src/pages/MenuDeskripsi';
 import MenuBaca from './src/pages/MenuBaca';
@@ -33,12 +33,136 @@ function App({navigation}) {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="MenuKomik"
-          component={MenuKomik}
+          name="BottomTabs"
+          component={BottomTabs}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>
+  );
+}
+
+function BottomTabs() {
+  return (
+    <Tab.Navigator
+      initialRouteName="MenuHome"
+      screenOptions={{tabBarActiveTintColor: '#E91E63'}}>
+      <Tab.Screen
+        name="MenuHome"
+        component={MenuHome}
+        // options={{
+        //   tabBarIcon: ({focused}) => (
+        //     <View
+        //       style={{
+        //         //centring Tab Button
+        //         position: 'absolute',
+        //         top: '20%',
+        //       }}>
+        //       <Icon name="home" color={color} size={20} />
+        //     </View>
+        //   ),
+        // }}
+        options={{
+          tabBarLabel: 'Home',
+          headerShown: false,
+          tabBarIcon: ({color, size}) => (
+            <Icon name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="MenuFavorite"
+        component={MenuFavorite}
+        // options={{
+        //   tabBarIcon: ({focused}) => (
+        //     <View
+        //       style={{
+        //         //centring Tab Button
+        //         position: 'absolute',
+        //         top: '50%',
+        //       }}>
+        //       <Icon name="home" color={color} size={20} />
+        //     </View>
+        //   ),
+        // }}
+        options={{
+          tabBarLabel: 'Home',
+          headerShown: false,
+          tabBarIcon: ({color, size}) => (
+            <Icon name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="MenuRecent"
+        component={MenuRecent}
+        // options={{
+        //   tabBarIcon: ({focused}) => (
+        //     <View
+        //       style={{
+        //         //centring Tab Button
+        //         position: 'absolute',
+        //         top: '50%',
+        //       }}>
+        //       <Icon name="home" color={color} size={20} />
+        //     </View>
+        //   ),
+        // }}
+        options={{
+          tabBarLabel: 'Home',
+          headerShown: false,
+          tabBarIcon: ({color, size}) => (
+            <Icon name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="MenuDownload"
+        component={MenuDownload}
+        // options={{
+        //   tabBarIcon: ({focused}) => (
+        //     <View
+        //       style={{
+        //         //centring Tab Button
+        //         position: 'absolute',
+        //         top: '50%',
+        //       }}>
+        //       <Icon name="home" color={color} size={20} />
+        //     </View>
+        //   ),
+        // }}
+        options={{
+          tabBarLabel: 'Home',
+          headerShown: false,
+          tabBarIcon: ({color, size}) => (
+            <Icon name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="MenuAccount"
+        component={MenuAccount}
+        // options={{
+        //   tabBarIcon: ({focused}) => (
+        //     <View
+        //       style={{
+        //         //centring Tab Button
+        //         position: 'absolute',
+        //         top: '50%',
+        //       }}>
+        //       <Icon name="home" color={color} size={20} />
+        //     </View>
+        //   ),
+        // }}
+        options={{
+          tabBarLabel: 'Home',
+          headerShown: false,
+          tabBarIcon: ({color, size}) => (
+            <Icon name="home" color={color} size={size} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
   );
 }
 

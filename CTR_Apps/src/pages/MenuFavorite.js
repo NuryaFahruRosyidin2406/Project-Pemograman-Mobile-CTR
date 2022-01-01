@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 const MenuFavorite = ({navigation}) => {
   return (
     <View>
-      <Text></Text>
+      <Text>Ini Menu Favorite</Text>
     </View>
   );
 };

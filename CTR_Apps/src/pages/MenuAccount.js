@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 const MenuAccount = ({navigation}) => {
   return (
     <View>
-      <Text></Text>
+      <Text>Ini Menu Account</Text>
     </View>
   );
 };

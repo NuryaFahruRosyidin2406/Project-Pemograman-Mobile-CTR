@@ -45,7 +45,7 @@ const Login = ({navigation}) => {
               <Button
                 title="Guest"
                 color="#211D1D"
-                onPress={() => navigation.navigate('MenuKomik')}
+                onPress={() => navigation.navigate('BottomTabs')}
               />
             </View>
           </View>
