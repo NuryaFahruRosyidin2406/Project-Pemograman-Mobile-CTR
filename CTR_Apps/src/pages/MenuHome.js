@@ -118,10 +118,9 @@ const MenuHome = ({navigation}) => {
                   fontWeight: 'bold',
                   color: 'black',
                   fontSize: 20,
-                  paddingHorizontal: 130,
+                  textAlign: 'center',
                 }}>
-                {' '}
-                RECOMENDED{' '}
+                RECOMMENDED
               </Text>
             </View>
           </ImageBackground>

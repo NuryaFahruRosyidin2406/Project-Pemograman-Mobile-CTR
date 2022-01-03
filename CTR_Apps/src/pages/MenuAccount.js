@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 
 const MenuAccount = ({navigation}) => {
   return (
-    <View>
+    <View style={{flex: 1}}>
       <Text>Ini Menu Account</Text>
     </View>
   );

@@ -3,7 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 
 const MenuFavorite = ({navigation}) => {
   return (
-    <View>
+    <View style={{flex: 1}}>
       <Text>Ini Menu Favorite</Text>
     </View>
   );

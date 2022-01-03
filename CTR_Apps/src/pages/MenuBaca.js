@@ -3,8 +3,8 @@ import {StyleSheet, Text, View} from 'react-native';
 
 const MenuBaca = ({navigation}) => {
   return (
-    <View>
-      <Text></Text>
+    <View style={{flex: 1}}>
+      <Text>Ini Menu Baca</Text>
     </View>
   );
 };
