@@ -50,18 +50,6 @@ function BottomTabs() {
       <Tab.Screen
         name="MenuHome"
         component={MenuHome}
-        // options={{
-        //   tabBarIcon: ({focused}) => (
-        //     <View
-        //       style={{
-        //         //centring Tab Button
-        //         position: 'absolute',
-        //         top: '20%',
-        //       }}>
-        //       <Icon name="home" color={color} size={20} />
-        //     </View>
-        //   ),
-        // }}
         options={{
           tabBarLabel: 'Home',
           headerShown: false,
@@ -73,20 +61,8 @@ function BottomTabs() {
       <Tab.Screen
         name="MenuFavorite"
         component={MenuFavorite}
-        // options={{
-        //   tabBarIcon: ({focused}) => (
-        //     <View
-        //       style={{
-        //         //centring Tab Button
-        //         position: 'absolute',
-        //         top: '50%',
-        //       }}>
-        //       <Icon name="home" color={color} size={20} />
-        //     </View>
-        //   ),
-        // }}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Favorites',
           headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon name="home" color={color} size={size} />
@@ -96,20 +72,8 @@ function BottomTabs() {
       <Tab.Screen
         name="MenuRecent"
         component={MenuRecent}
-        // options={{
-        //   tabBarIcon: ({focused}) => (
-        //     <View
-        //       style={{
-        //         //centring Tab Button
-        //         position: 'absolute',
-        //         top: '50%',
-        //       }}>
-        //       <Icon name="home" color={color} size={20} />
-        //     </View>
-        //   ),
-        // }}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Recent',
           headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon name="home" color={color} size={size} />
@@ -119,20 +83,8 @@ function BottomTabs() {
       <Tab.Screen
         name="MenuDownload"
         component={MenuDownload}
-        // options={{
-        //   tabBarIcon: ({focused}) => (
-        //     <View
-        //       style={{
-        //         //centring Tab Button
-        //         position: 'absolute',
-        //         top: '50%',
-        //       }}>
-        //       <Icon name="home" color={color} size={20} />
-        //     </View>
-        //   ),
-        // }}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Download',
           headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon name="home" color={color} size={size} />
@@ -142,20 +94,8 @@ function BottomTabs() {
       <Tab.Screen
         name="MenuAccount"
         component={MenuAccount}
-        // options={{
-        //   tabBarIcon: ({focused}) => (
-        //     <View
-        //       style={{
-        //         //centring Tab Button
-        //         position: 'absolute',
-        //         top: '50%',
-        //       }}>
-        //       <Icon name="home" color={color} size={20} />
-        //     </View>
-        //   ),
-        // }}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Account',
           headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon name="home" color={color} size={size} />
