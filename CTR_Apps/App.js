@@ -3,7 +3,7 @@ import {Button, Text, View, color} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome'; //import icon from 'react-native-vector-icons/FontAwesome';, FontAwesome bisa diganti
+import Icon from 'react-native-vector-icons/Ionicons'; //import icon from 'react-native-vector-icons/FontAwesome';, FontAwesome bisa diganti
 import Login from './src/pages/Login';
 import MenuLogin from './src/pages/MenuLogin';
 import MenuHome from './src/pages/MenuHome';
@@ -48,46 +48,46 @@ function BottomTabs() {
       initialRouteName="MenuHome"
       screenOptions={{tabBarActiveTintColor: '#E91E63'}}>
       <Tab.Screen
-        name="MenuHome"
+        name="Home"
         component={MenuHome}
         options={{
           tabBarLabel: 'Home',
           headerShown: false,
           tabBarIcon: ({color, size}) => (
-            <Icon name="home" color={color} size={size} />
+            <Icon name="home-outline" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="MenuFavorite"
+        name="Favorites"
         component={MenuFavorite}
         options={{
           tabBarLabel: 'Favorites',
-          headerShown: false,
+          // headerShown: false,
           tabBarIcon: ({color, size}) => (
-            <Icon name="home" color={color} size={size} />
+            <Icon name="star-outline" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="MenuRecent"
+        name="Recent"
         component={MenuRecent}
         options={{
           tabBarLabel: 'Recent',
-          headerShown: false,
+          // headerShown: false,
           tabBarIcon: ({color, size}) => (
-            <Icon name="home" color={color} size={size} />
+            <Icon name="time-outline" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="MenuDownload"
+        name="Download"
         component={MenuDownload}
         options={{
           tabBarLabel: 'Download',
-          headerShown: false,
+          // headerShown: false,
           tabBarIcon: ({color, size}) => (
-            <Icon name="home" color={color} size={size} />
+            <Icon name="download-outline" color={color} size={size} />
           ),
         }}
       />
@@ -98,7 +98,7 @@ function BottomTabs() {
           tabBarLabel: 'Account',
           headerShown: false,
           tabBarIcon: ({color, size}) => (
-            <Icon name="home" color={color} size={size} />
+            <Icon name="person-circle-outline" color={color} size={size} />
           ),
         }}
       />
