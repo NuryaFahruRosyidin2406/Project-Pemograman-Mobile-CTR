@@ -14,6 +14,7 @@ import MenuFavorite from './src/pages/MenuFavorite';
 import MenuRecent from './src/pages/MenuRecent';
 import MenuDownload from './src/pages/MenuDownload';
 import MenuAccount from './src/pages/MenuAccount';
+import SplashScreen from './src/pages/SplashScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -22,11 +23,19 @@ function App({navigation}) {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        
+      <Stack.Screen
+          name="SplashScreen"
+          component={SplashScreen}
+          options={{headerShown: false}}
+        />
+
         <Stack.Screen
           name="Login"
           component={Login}
           options={{headerShown: false}}
         />
+
         <Stack.Screen
           name="MenuLogin"
           component={MenuLogin}
@@ -63,7 +72,7 @@ function BottomTabs() {
         component={MenuFavorite}
         options={{
           tabBarLabel: 'Favorites',
-          // headerShown: false,
+           headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon name="star-outline" color={color} size={size} />
           ),
@@ -74,7 +83,7 @@ function BottomTabs() {
         component={MenuRecent}
         options={{
           tabBarLabel: 'Recent',
-          // headerShown: false,
+          headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon name="time-outline" color={color} size={size} />
           ),
@@ -85,7 +94,7 @@ function BottomTabs() {
         component={MenuDownload}
         options={{
           tabBarLabel: 'Download',
-          // headerShown: false,
+          headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon name="download-outline" color={color} size={size} />
           ),

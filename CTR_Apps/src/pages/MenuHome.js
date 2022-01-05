@@ -5,8 +5,11 @@ import {
   View,
   ScrollView,
   Image,
+  Button,
   ImageBackground,
 } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
 
 const MenuHome = ({navigation}) => {
   return (
@@ -126,6 +129,7 @@ const MenuHome = ({navigation}) => {
           </ImageBackground>
         </View>
       </ScrollView>
+      
 
       {/* <View
         style={{
@@ -218,9 +222,15 @@ const MenuHome = ({navigation}) => {
         </View>
       </View> */}
     </View>
+    
   );
+
+  
 };
 
 export default MenuHome;
 
 const styles = StyleSheet.create({});
+
+
+
