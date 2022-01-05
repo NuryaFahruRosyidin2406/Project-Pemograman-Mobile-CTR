@@ -3,6 +3,7 @@ import {Button, Text, View, color} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+// import {createDrawerNavigator} from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/Ionicons'; //import icon from 'react-native-vector-icons/FontAwesome';, FontAwesome bisa diganti
 import Login from './src/pages/Login';
 import MenuLogin from './src/pages/MenuLogin';
@@ -18,13 +19,13 @@ import SplashScreen from './src/pages/SplashScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+// const Drawer = createDrawerNavigator();
 
 function App({navigation}) {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        
-      <Stack.Screen
+        <Stack.Screen
           name="SplashScreen"
           component={SplashScreen}
           options={{headerShown: false}}
@@ -72,7 +73,7 @@ function BottomTabs() {
         component={MenuFavorite}
         options={{
           tabBarLabel: 'Favorites',
-           headerShown: false,
+          headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon name="star-outline" color={color} size={size} />
           ),
