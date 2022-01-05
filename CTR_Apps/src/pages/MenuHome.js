@@ -18,20 +18,24 @@ const MenuHome = ({navigation}) => {
           justifyContent: 'space-around',
           padding: 10,
         }}>
-        <Text
-          style={{
-            color: 'white',
-            fontWeight: 'bold',
-          }}>
-          HOME
-        </Text>
-        <Text
-          style={{
-            color: 'white',
-            fontWeight: 'bold',
-          }}>
-          LATEST
-        </Text>
+        <View style={{backgroundColor: 'pink' /*padding: 10*/}}>
+          <Text
+            style={{
+              color: 'white',
+              fontWeight: 'bold',
+            }}>
+            HOME
+          </Text>
+        </View>
+        <View style={{backgroundColor: 'yellow' /*padding: 10*/}}>
+          <Text
+            style={{
+              color: 'white',
+              fontWeight: 'bold',
+            }}>
+            LATEST
+          </Text>
+        </View>
       </View>
 
       <ScrollView>
