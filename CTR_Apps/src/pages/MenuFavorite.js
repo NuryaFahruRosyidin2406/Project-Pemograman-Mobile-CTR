@@ -22,13 +22,17 @@ const MenuRecent = ({navigation}) => {
           <Text style={{color: 'white', fontWeight: 'bold'}}>Favorites</Text>
         </View>
         <View style={{flex: 1}}>
-          <Image
+          <ImageBackground
             source={require('../image/image28.png')}
-            style={{height: 200, width: 401}}></Image>
+            style={{height: 200, width: 401}}></ImageBackground>
           <View style={{alignItems: 'center', paddingTop: 10}}>
-            <Image
+            <ImageBackground
               source={require('../image/image14.png')}
-              style={{height: 190, width: 400, alignItems: 'center'}}></Image>
+              style={{
+                height: 190,
+                width: 400,
+                alignItems: 'center',
+              }}></ImageBackground>
           </View>
           <View>
             <ImageBackground
