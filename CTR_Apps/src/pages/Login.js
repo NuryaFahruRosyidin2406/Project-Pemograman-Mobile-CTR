@@ -11,28 +11,14 @@ import {
 const Login = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
-      <View>
+      
+  
+      <View style={{flex: 1}}>
         <ImageBackground
-          source={require('../image/image14.png')}
-          style={{height: 170, width: 401}}>
-          <View style={{alignItems: 'center', paddingTop: 70}}>
-            <Image
-              source={require('../image/ctr.png')}
-              style={{height: 50, width: 321, alignItems: 'center'}}></Image>
-          </View>
-        </ImageBackground>
-      </View>
-
-      <View>
-        <Image
-          source={require('../image/Logoapk.png')}
-          style={{height: 310, width: 401}}></Image>
-      </View>
-      <View>
-        <ImageBackground
-          source={require('../image/image16.png')}
-          style={{height: 240, width: 401}}>
-          <View style={{paddingTop: 45}}>
+          source={require('../image/background/1x/background1mdpi.png')}
+          style={{flex: 1}}>
+             <Image source={require('../image/ctr.png')} style={{height: 50,width: 321}}></Image>
+          <View style={{paddingTop: 470}}>
             <View style={{paddingHorizontal: 30}}>
               <Button
                 title="Login"
@@ -40,7 +26,7 @@ const Login = ({navigation}) => {
                 onPress={() => navigation.navigate('MenuLogin')}
               />
             </View>
-            <View style={{padding: 2}}></View>
+            <View style={{padding: 5 }}></View>
             <View style={{paddingHorizontal: 30}}>
               <Button
                 title="Guest"

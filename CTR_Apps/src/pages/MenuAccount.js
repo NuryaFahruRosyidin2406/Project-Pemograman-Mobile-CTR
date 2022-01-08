@@ -3,6 +3,10 @@ import {StyleSheet, Text, View,  ScrollView,
   Image,
   ImageBackground,} from 'react-native';
 
+
+  
+
+
 const MenuRecent = ({navigation}) => {
   return (
     <>
@@ -12,21 +16,9 @@ const MenuRecent = ({navigation}) => {
     </View>
     <View style={{flex: 1 }}>
       <ImageBackground  
-          source={require('../image/image28.png')}
-          style={{height: 200, width: 401}}>
+          source={require('../image/background2/0.75x/background2ldpi.png')}
+          style={{flex:1}}>
         </ImageBackground>
-
-        <View style={{alignItems: 'center', paddingTop: 10}}>
-            <ImageBackground
-              source={require('../image/image14.png')}
-              style={{height: 190, width: 400, alignItems: 'center'}}></ImageBackground>
-          </View>
-
-          <View>
-        <ImageBackground
-          source={require('../image/image16.png')}
-          style={{height: 240, width: 401}}></ImageBackground>
-          </View>
 
       </View>
       </View>
