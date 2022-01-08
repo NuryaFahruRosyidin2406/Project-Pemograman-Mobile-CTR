@@ -30,13 +30,11 @@ function App({navigation}) {
           component={SplashScreen}
           options={{headerShown: false}}
         />
-
         <Stack.Screen
           name="Login"
           component={Login}
           options={{headerShown: false}}
         />
-
         <Stack.Screen
           name="MenuLogin"
           component={MenuLogin}
@@ -45,6 +43,11 @@ function App({navigation}) {
         <Stack.Screen
           name="BottomTabs"
           component={BottomTabs}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MenuLatest"
+          component={MenuLatest}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

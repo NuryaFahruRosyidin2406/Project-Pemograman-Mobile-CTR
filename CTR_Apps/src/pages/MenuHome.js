@@ -21,30 +21,44 @@ const MenuHome = ({navigation}) => {
         <TouchableOpacity
           style={{
             backgroundColor: '#383232',
-            paddingVertical: 10,
+            // paddingVertical: 10,
             paddingHorizontal: 75.5,
           }}>
-          <Text
+          {/* <Text
             style={{
               color: 'white',
               fontWeight: 'bold',
             }}>
             HOME
-          </Text>
+          </Text> */}
+          <View>
+            <Button
+              title="HOME"
+              color="#383232"
+              onPress={() => navigation.navigate('BottomTabs')}
+            />
+          </View>
         </TouchableOpacity>
         <TouchableOpacity
           style={{
             backgroundColor: '#383232',
-            paddingVertical: 10,
+            // paddingVertical: 10,
             paddingHorizontal: 75.5,
           }}>
-          <Text
+          {/* <Text
             style={{
               color: 'white',
               fontWeight: 'bold',
             }}>
             LATEST
-          </Text>
+          </Text> */}
+          <View>
+            <Button
+              title="LATEST"
+              color="#383232"
+              onPress={() => navigation.navigate('MenuLatest')}
+            />
+          </View>
         </TouchableOpacity>
       </View>
 
