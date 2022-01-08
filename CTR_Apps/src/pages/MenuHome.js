@@ -7,34 +7,45 @@ import {
   Image,
   Button,
   ImageBackground,
+  TouchableOpacity,
 } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
 
 const MenuHome = ({navigation}) => {
   return (
-    <View style={{flex: 1, backgroundColor: '#FFFFFF'}}>
+    <View style={{flex: 1}}>
       <View
         style={{
-          backgroundColor: '#383232',
           flexDirection: 'row',
           justifyContent: 'space-around',
-          padding: 10,
         }}>
-        <Text
+        <TouchableOpacity
           style={{
-            color: 'white',
-            fontWeight: 'bold',
+            backgroundColor: '#383232',
+            paddingVertical: 10,
+            paddingHorizontal: 75.5,
           }}>
-          HOME
-        </Text>
-        <Text
+          <Text
+            style={{
+              color: 'white',
+              fontWeight: 'bold',
+            }}>
+            HOME
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
           style={{
-            color: 'white',
-            fontWeight: 'bold',
+            backgroundColor: '#383232',
+            paddingVertical: 10,
+            paddingHorizontal: 75.5,
           }}>
-          LATEST
-        </Text>
+          <Text
+            style={{
+              color: 'white',
+              fontWeight: 'bold',
+            }}>
+            LATEST
+          </Text>
+        </TouchableOpacity>
       </View>
 
       <ScrollView>
@@ -129,7 +140,6 @@ const MenuHome = ({navigation}) => {
           </ImageBackground>
         </View>
       </ScrollView>
-      
 
       {/* <View
         style={{
@@ -222,15 +232,9 @@ const MenuHome = ({navigation}) => {
         </View>
       </View> */}
     </View>
-    
   );
-
-  
 };
 
 export default MenuHome;
 
 const styles = StyleSheet.create({});
-
-
-
