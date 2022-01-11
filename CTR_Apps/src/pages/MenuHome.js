@@ -9,7 +9,7 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
-import Manga1 from '../manga/manga1';
+import MangaA from '../manga/MangaA';
 
 const MenuHome = ({navigation}) => {
   return (
@@ -67,13 +67,13 @@ const MenuHome = ({navigation}) => {
                 </Text>
               </View>
               <ScrollView horizontal={true} style={{flexDirection: 'row'}}>
-                <Manga1 />
-                <Manga1 />
-                <Manga1 />
-                <Manga1 />
-                <Manga1 />
-                <Manga1 />
-                <Manga1 />
+                <MangaA />
+                <MangaA />
+                <MangaA />
+                <MangaA />
+                <MangaA />
+                <MangaA />
+                <MangaA />
               </ScrollView>
             </View>
           </View>
