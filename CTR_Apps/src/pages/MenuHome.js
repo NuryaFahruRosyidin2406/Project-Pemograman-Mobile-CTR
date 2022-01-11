@@ -10,6 +10,15 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import MangaA from '../manga/MangaA';
+import MangaB from '../manga/MangaB';
+import MangaC from '../manga/MangaC';
+import MangaD from '../manga/MangaD';
+import MangaE from '../manga/MangaE';
+import MangaF from '../manga/MangaF';
+import MangaG from '../manga/MangaG';
+import MangaH from '../manga/MangaH';
+import MangaI from '../manga/MangaI';
+import MangaJ from '../manga/MangaJ';
 
 const MenuHome = ({navigation}) => {
   return (
@@ -52,143 +61,70 @@ const MenuHome = ({navigation}) => {
         </View>
         <ScrollView>
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
-            <View
-              source={require('../image/image14.png')}
-              style={{height: 210, width: 401}}>
-              <View>
-                <Text
-                  style={{
-                    fontWeight: 'bold',
-                    color: 'black',
-                    fontSize: 20,
-                    textAlign: 'center',
-                  }}>
-                  HOT
-                </Text>
-              </View>
-              <ScrollView horizontal={true} style={{flexDirection: 'row'}}>
-                <MangaA />
-                <MangaA />
-                <MangaA />
-                <MangaA />
-                <MangaA />
-                <MangaA />
-                <MangaA />
-              </ScrollView>
+            <View>
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                  color: 'black',
+                  fontSize: 20,
+                  textAlign: 'center',
+                }}>
+                HOT
+              </Text>
             </View>
+            <ScrollView
+              horizontal={true}
+              style={{
+                flexDirection: 'row',
+                // backgroundColor: 'pink',
+                marginHorizontal: 16,
+                paddingHorizontal: 3,
+              }}>
+              <MangaA />
+              <MangaB />
+              <MangaC />
+              <MangaD />
+              <MangaE />
+              <MangaF />
+              <MangaG />
+              <MangaH />
+              <MangaI />
+              <MangaJ />
+            </ScrollView>
           </View>
           <View>
-            <View
-              source={require('../image/image16.png')}
-              style={{height: 170, width: 401}}>
-              <View>
-                <Text
-                  style={{
-                    fontWeight: 'bold',
-                    color: 'black',
-                    fontSize: 20,
-                    textAlign: 'center',
-                  }}>
-                  RECOMMENDED
-                </Text>
-              </View>
+            <View>
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                  color: 'black',
+                  fontSize: 20,
+                  textAlign: 'center',
+                }}>
+                RECOMMENDED
+              </Text>
             </View>
+            <ScrollView
+              horizontal={true}
+              style={{
+                flexDirection: 'row',
+                marginHorizontal: 16,
+                paddingHorizontal: 3,
+              }}>
+              <MangaA />
+              <MangaB />
+              <MangaC />
+              <MangaD />
+              <MangaE />
+              <MangaF />
+              <MangaG />
+              <MangaH />
+              <MangaI />
+              <MangaJ />
+            </ScrollView>
           </View>
         </ScrollView>
       </ImageBackground>
-
-      {/* Bagian Gambar */}
-
-      {/* <View
-        style={{
-          backgroundColor: 'white',
-          paddingVertical: 20,
-          flexDirection: 'row',
-        }}>
-        <View
-          style={{
-            backgroundColor: 'pink',
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: 26,
-            width: 26,
-            backgroundColor: 'white',
-          }}>
-          <Image
-            source={require('../image/home2.png')}
-            style={{height: 34, width: 34}}></Image>
-          <Text style={{fontSize: 10, color: 'black', marginTop: 4}}>Home</Text>
-        </View>
-        <View
-          style={{
-            backgroundColor: 'blue',
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: 26,
-            width: 26,
-            backgroundColor: 'white',
-          }}>
-          <Image
-            source={require('../image/favorite2.png')}
-            style={{height: 34, width: 34}}></Image>
-          <Text style={{fontSize: 10, color: 'black', marginTop: 4}}>
-            Favorite
-          </Text>
-        </View>
-        <View
-          style={{
-            backgroundColor: 'yellow',
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: 26,
-            width: 26,
-            backgroundColor: 'white',
-          }}>
-          <Image
-            source={require('../image/recent3.png')}
-            style={{height: 34, width: 34}}></Image>
-          <Text style={{fontSize: 10, color: 'black', marginTop: 4}}>
-            Recent
-          </Text>
-        </View>
-        <View
-          style={{
-            backgroundColor: 'red',
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: 26,
-            width: 26,
-            backgroundColor: 'white',
-          }}>
-          <Image
-            source={require('../image/Download2.png')}
-            style={{height: 34, width: 34}}></Image>
-          <Text style={{fontSize: 10, color: 'black', marginTop: 4}}>
-            Download
-          </Text>
-        </View>
-        <View
-          style={{
-            backgroundColor: 'brown',
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: 26,
-            width: 26,
-            backgroundColor: 'white',
-          }}>
-          <Image
-            source={require('../image/Account2.png')}
-            style={{height: 34, width: 34}}></Image>
-          <Text style={{fontSize: 10, color: 'black', marginTop: 4}}>
-            Account
-          </Text>
-        </View>
-      </View> */}
     </View>
   );
 };
