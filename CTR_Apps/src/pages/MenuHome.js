@@ -9,131 +9,95 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
+import Manga1 from '../manga/manga1';
 
 const MenuHome = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-around',
-        }}>
-        <TouchableOpacity
+      <ImageBackground
+        source={require('../image/background2/1x/background2mdpi.png')}
+        style={{flex: 1}}>
+        <View
           style={{
-            backgroundColor: '#383232',
-            paddingVertical: 7,
-            paddingHorizontal: 76,
-          }}
-          onPress={() => navigation.navigate('BottomTabs')}>
-          <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
-            HOME
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#383232',
-            paddingVertical: 7,
-            paddingHorizontal: 76,
-          }}
-          onPress={() => navigation.navigate('MenuLatest')}>
-          <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
-            LATEST
-          </Text>
-        </TouchableOpacity>
-      </View>
-
-      <ScrollView>
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+          }}>
+          <TouchableOpacity
+            style={{
+              backgroundColor: '#383232',
+              paddingVertical: 7,
+              paddingHorizontal: 76,
+            }}
+            onPress={() => navigation.navigate('BottomTabs')}>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
+              HOME
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              backgroundColor: '#383232',
+              paddingVertical: 7,
+              paddingHorizontal: 76,
+            }}
+            onPress={() => navigation.navigate('MenuLatest')}>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
+              LATEST
+            </Text>
+          </TouchableOpacity>
+        </View>
         <View style={{}}>
           <Image
             source={require('../image/image19.png')}
             style={{height: 240, width: 400}}></Image>
         </View>
-        <View style={{alignItems: 'center', justifyContent: 'center'}}>
-          <ImageBackground
-            source={require('../image/image14.png')}
-            style={{height: 210, width: 401}}>
-            <View>
-              <Text
-                style={{
-                  fontWeight: 'bold',
-                  color: 'black',
-                  fontSize: 20,
-                  paddingHorizontal: 177,
-                }}>
-                {' '}
-                HOT{' '}
-              </Text>
+        <ScrollView>
+          <View style={{alignItems: 'center', justifyContent: 'center'}}>
+            <View
+              source={require('../image/image14.png')}
+              style={{height: 210, width: 401}}>
+              <View>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    color: 'black',
+                    fontSize: 20,
+                    textAlign: 'center',
+                  }}>
+                  HOT
+                </Text>
+              </View>
+              <ScrollView horizontal={true} style={{flexDirection: 'row'}}>
+                <Manga1 />
+                <Manga1 />
+                <Manga1 />
+                <Manga1 />
+                <Manga1 />
+                <Manga1 />
+                <Manga1 />
+              </ScrollView>
             </View>
-            <ScrollView horizontal={true} style={{flexDirection: 'row'}}>
+          </View>
+          <View>
+            <View
+              source={require('../image/image16.png')}
+              style={{height: 170, width: 401}}>
               <View>
-                <View style={{paddingHorizontal: 10}}>
-                  <Image
-                    source={require('../image/manga1.png')}
-                    style={{width: 110, height: 140}}></Image>
-                </View>
                 <Text
                   style={{
-                    fontSize: 16,
                     fontWeight: 'bold',
                     color: 'black',
-                    paddingHorizontal: 10,
+                    fontSize: 20,
+                    textAlign: 'center',
                   }}>
-                  Manga
+                  RECOMMENDED
                 </Text>
               </View>
-              <View>
-                <View style={{paddingHorizontal: 10}}>
-                  <Image
-                    source={require('../image/manga1.png')}
-                    style={{width: 110, height: 140}}></Image>
-                </View>
-                <Text
-                  style={{
-                    fontSize: 16,
-                    fontWeight: 'bold',
-                    color: 'black',
-                    paddingHorizontal: 10,
-                  }}>
-                  Manga
-                </Text>
-              </View>
-              <View>
-                <View style={{paddingHorizontal: 10}}>
-                  <Image
-                    source={require('../image/manga1.png')}
-                    style={{width: 110, height: 140}}></Image>
-                </View>
-                <Text
-                  style={{
-                    fontSize: 16,
-                    fontWeight: 'bold',
-                    color: 'black',
-                    paddingHorizontal: 10,
-                  }}>
-                  Manga
-                </Text>
-              </View>
-            </ScrollView>
-          </ImageBackground>
-        </View>
-        <View>
-          <ImageBackground
-            source={require('../image/image16.png')}
-            style={{height: 170, width: 401}}>
-            <View>
-              <Text
-                style={{
-                  fontWeight: 'bold',
-                  color: 'black',
-                  fontSize: 20,
-                  textAlign: 'center',
-                }}>
-                RECOMMENDED
-              </Text>
             </View>
-          </ImageBackground>
-        </View>
-      </ScrollView>
+          </View>
+        </ScrollView>
+      </ImageBackground>
+
+      {/* Bagian Gambar */}
 
       {/* <View
         style={{
