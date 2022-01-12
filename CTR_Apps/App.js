@@ -54,6 +54,21 @@ function App({navigation}) {
           component={MenuDeskripsi}
           options={{headerShown: false}}
         />
+        <Stack.Screen
+          name="MenuAccount"
+          component={MenuAccount}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MenuRecent"
+          component={MenuRecent}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MenuFavorite"
+          component={MenuFavorite}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
