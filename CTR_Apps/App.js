@@ -49,6 +49,11 @@ function App({navigation}) {
           component={MenuLatest}
           options={{headerShown: false}}
         />
+        <Stack.Screen
+          name="MenuDeskripsi"
+          component={MenuDeskripsi}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

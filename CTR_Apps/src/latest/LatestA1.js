@@ -1,12 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  TouchableOpacity,
+} from 'react-native';
 
-const LatestA1 = () => {
-  return (
-    <View>
-      <Text></Text>
-    </View>
-  );
+const LatestA1 = ({navigation}) => {
+  return <View></View>;
 };
 
 export default LatestA1;

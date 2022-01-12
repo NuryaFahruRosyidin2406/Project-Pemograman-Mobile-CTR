@@ -68,6 +68,7 @@ const MenuHome = ({navigation}) => {
                   color: 'black',
                   fontSize: 20,
                   textAlign: 'center',
+                  paddingTop: 15,
                 }}>
                 HOT
               </Text>
@@ -108,6 +109,39 @@ const MenuHome = ({navigation}) => {
               horizontal={true}
               style={{
                 flexDirection: 'row',
+                marginHorizontal: 16,
+                paddingHorizontal: 3,
+              }}>
+              <MangaA />
+              <MangaB />
+              <MangaC />
+              <MangaD />
+              <MangaE />
+              <MangaF />
+              <MangaG />
+              <MangaH />
+              <MangaI />
+              <MangaJ />
+            </ScrollView>
+          </View>
+          <View style={{alignItems: 'center', justifyContent: 'center'}}>
+            <View>
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                  color: 'black',
+                  fontSize: 20,
+                  textAlign: 'center',
+                  paddingTop: 15,
+                }}>
+                BERWARNA
+              </Text>
+            </View>
+            <ScrollView
+              horizontal={true}
+              style={{
+                flexDirection: 'row',
+                // backgroundColor: 'pink',
                 marginHorizontal: 16,
                 paddingHorizontal: 3,
               }}>
