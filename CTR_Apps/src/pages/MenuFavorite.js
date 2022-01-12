@@ -24,7 +24,40 @@ const MenuFavorite = ({navigation}) => {
         <View style={{flex: 1}}>
           <ImageBackground
             source={require('../image/background2/1x/background2mdpi.png')}
-            style={{flex: 1}}></ImageBackground>
+            style={{flex: 1}}>
+            <View style={{paddingVertical: 260}}>
+              <Text
+                style={{
+                  color: '#20232A',
+                  borderColor: 'black',
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  fontSize: 20,
+                }}>
+                Not yet added to favorites
+              </Text>
+              <Text
+                style={{
+                  color: '#20232A',
+                  borderColor: 'black',
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  fontSize: 20,
+                }}>
+                Add mangas to favorites
+              </Text>
+              <Text
+                style={{
+                  color: '#20232A',
+                  borderColor: 'black',
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  fontSize: 20,
+                }}>
+                I will tell you when new chapter are added
+              </Text>
+            </View>
+          </ImageBackground>
         </View>
       </View>
     </>

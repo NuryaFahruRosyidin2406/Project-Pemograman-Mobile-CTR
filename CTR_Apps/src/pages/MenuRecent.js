@@ -24,7 +24,30 @@ const MenuRecent = ({navigation}) => {
         <View style={{flex: 1}}>
           <ImageBackground
             source={require('../image/background2/0.75x/background2ldpi.png')}
-            style={{flex: 1}}></ImageBackground>
+            style={{flex: 1}}>
+            <View style={{paddingVertical: 280}}>
+              <Text
+                style={{
+                  color: '#20232A',
+                  borderColor: 'black',
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  fontSize: 20,
+                }}>
+                You have no read history
+              </Text>
+              <Text
+                style={{
+                  color: '#20232A',
+                  borderColor: 'black',
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  fontSize: 20,
+                }}>
+                Recently read comics
+              </Text>
+            </View>
+          </ImageBackground>
         </View>
       </View>
     </>
