@@ -15,7 +15,6 @@ const MenuAccount = ({navigation}) => {
       <View style={{flex: 1}}>
         <View
           style={{
-          
             backgroundColor: '#383232',
             flexDirection: 'row',
             justifyContent: 'space-around',

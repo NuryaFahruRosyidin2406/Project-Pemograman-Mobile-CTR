@@ -8,7 +8,7 @@ import {
   ImageBackground,
 } from 'react-native';
 
-const MenuRecent = ({navigation}) => {
+const MenuDownload = ({navigation}) => {
   return (
     <>
       <View style={{flex: 1}}>
@@ -54,6 +54,6 @@ const MenuRecent = ({navigation}) => {
   );
 };
 
-export default MenuRecent;
+export default MenuDownload;
 
 const styles = StyleSheet.create({});
