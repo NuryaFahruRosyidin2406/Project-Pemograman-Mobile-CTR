@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,15 +7,148 @@ import {
   TouchableOpacity,
   Button,
   ScrollView,
+  FlatList,
 } from 'react-native';
-import LatestA1 from '../latest/LatestA1';
+import firestore from '@react-native-firebase/firestore';
 
 const MenuLatest = ({navigation}) => {
+  // penggunaan api
+  const [manga, setManga] = React.useState([]);
+  const [manga2, setManga2] = React.useState([]);
+  const [manga3, setManga3] = React.useState([]);
+  const [manga4, setManga4] = React.useState([]);
+  const [manga5, setManga5] = React.useState([]);
+  const [manga6, setManga6] = React.useState([]);
+
+  useEffect(() => {
+    getManga();
+    getManga2();
+    getManga3();
+    getManga4();
+    getManga5();
+    getManga6();
+  });
+
+  // memakai api Manga
+  const getManga = async () => {
+    firestore()
+      .collection('Manga')
+      .get()
+      .then(querySnapshot => {
+        const manga = [];
+        querySnapshot.forEach(doc => {
+          console.log(doc.data());
+          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+          manga.push({
+            ...doc.data(),
+            key: doc.id,
+          });
+        });
+        setManga(manga);
+      });
+  };
+
+  // memakai api Manga2
+  const getManga2 = async () => {
+    firestore()
+      .collection('Manga2')
+      .get()
+      .then(querySnapshot => {
+        const manga2 = [];
+        querySnapshot.forEach(doc => {
+          console.log(doc.data());
+          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+          manga2.push({
+            ...doc.data(),
+            key: doc.id,
+          });
+        });
+        setManga2(manga2);
+      });
+  };
+
+  // memakai api Manga3
+  const getManga3 = async () => {
+    firestore()
+      .collection('Manga3')
+      .get()
+      .then(querySnapshot => {
+        const manga3 = [];
+        querySnapshot.forEach(doc => {
+          console.log(doc.data());
+          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+          manga3.push({
+            ...doc.data(),
+            key: doc.id,
+          });
+        });
+        setManga3(manga3);
+      });
+  };
+
+  // memakai api Manga4
+  const getManga4 = async () => {
+    firestore()
+      .collection('Manga4')
+      .get()
+      .then(querySnapshot => {
+        const manga4 = [];
+        querySnapshot.forEach(doc => {
+          console.log(doc.data());
+          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+          manga4.push({
+            ...doc.data(),
+            key: doc.id,
+          });
+        });
+        setManga4(manga4);
+      });
+  };
+
+  // memakai api Manga5
+  const getManga5 = async () => {
+    firestore()
+      .collection('Manga5')
+      .get()
+      .then(querySnapshot => {
+        const manga5 = [];
+        querySnapshot.forEach(doc => {
+          console.log(doc.data());
+          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+          manga5.push({
+            ...doc.data(),
+            key: doc.id,
+          });
+        });
+        setManga5(manga5);
+      });
+  };
+
+  // memakai api Manga6
+  const getManga6 = async () => {
+    firestore()
+      .collection('Manga6')
+      .get()
+      .then(querySnapshot => {
+        const manga6 = [];
+        querySnapshot.forEach(doc => {
+          console.log(doc.data());
+          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+          manga6.push({
+            ...doc.data(),
+            key: doc.id,
+          });
+        });
+        setManga6(manga6);
+      });
+  };
+
   return (
     <View style={{flex: 1}}>
       <ImageBackground
         source={require('../image/background2/1x/background2mdpi.png')}
         style={{flex: 1}}>
+        {/* Bagian Home dan Latest */}
         <View
           style={{
             flexDirection: 'row',
@@ -44,337 +177,417 @@ const MenuLatest = ({navigation}) => {
             </Text>
           </TouchableOpacity>
         </View>
-        {/* <LatestA1 /> */}
+        {/* Bagian Home dan Latest */}
         <ScrollView>
-          <View
-            style={{
-              backgroundColor: '#BCBCBC',
-              // paddingTop: 95,
-              // paddingBottom: 95,
-            }}>
-            <ImageBackground
-              source={require('../image/Manga1/skdaysbg.png')}
-              style={{height: 207, width: 400}}>
-              <View style={{marginLeft: 8}}>
-                <Text
+          {/* Manga Sakamoto */}
+          <View>
+            <FlatList
+              data={manga}
+              renderItem={({item}) => (
+                <View
                   style={{
-                    fontWeight: 'bold',
-                    color: 'white',
-                    fontSize: 25,
-                    paddingTop: 170,
+                    backgroundColor: '#BCBCBC',
+                    // paddingTop: 95,
+                    // paddingBottom: 95,
                   }}>
-                  Sakamoto Days
-                </Text>
-              </View>
-            </ImageBackground>
-            <View
-              style={{
-                marginTop: 25,
-                marginHorizontal: 12,
-                marginBottom: 15,
-              }}>
-              <View style={{}}>
-                <Text style={{fontSize: 12,textAlign:'justify'}}>
-                Bercerita tentang Taro Sakamoto adalah pembunuh utama, ditakuti oleh penjahat dan dikagumi oleh pembunuh bayaran. Tapi suatu hari ... dia jatuh cinta! Pensiun, pernikahan, menjadi ayah, dan kemudian ... Sakamoto bertambah gemuk! Pria gemuk yang menjalankan toko lingkungan sebenarnya adalah mantan pembunuh bayaran legendaris! Bisakah dia melindungi keluarganya dari bahaya?
-                </Text>
-              </View>
-            </View>
-            <View style={{marginRight: 12, marginBottom: 15, marginLeft: 225}}>
-              <TouchableOpacity
-                style={{
-                  backgroundColor: '#383232',
-                  paddingVertical: 10,
-                  paddingHorizontal: 15,
-                  borderRadius: 20,
-                }}
-                onPress={() => navigation.navigate('MenuDeskripsi')}>
-                <Text
-                  style={{
-                    color: 'white',
-                    fontSize: 17,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                  }}>
-                  Chapter 1
-                </Text>
-              </TouchableOpacity>
-            </View>
+                  <ImageBackground
+                    source={require('../image/Manga1/skdaysbg.png')}
+                    style={{height: 207, width: 400}}>
+                    <View style={{marginLeft: 8}}>
+                      <Text
+                        style={{
+                          fontWeight: 'bold',
+                          color: 'white',
+                          fontSize: 25,
+                          paddingTop: 170,
+                        }}>
+                        {item.title}
+                      </Text>
+                    </View>
+                  </ImageBackground>
+                  <View
+                    style={{
+                      marginTop: 25,
+                      marginHorizontal: 12,
+                      marginBottom: 15,
+                    }}>
+                    <View style={{}}>
+                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                        {item.sinopsis}
+                      </Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      marginRight: 12,
+                      marginBottom: 15,
+                      marginLeft: 225,
+                    }}>
+                    <TouchableOpacity
+                      style={{
+                        backgroundColor: '#383232',
+                        paddingVertical: 10,
+                        paddingHorizontal: 15,
+                        borderRadius: 20,
+                      }}
+                      onPress={() => navigation.navigate('MenuDeskripsi')}>
+                      <Text
+                        style={{
+                          color: 'white',
+                          fontSize: 17,
+                          fontWeight: 'bold',
+                          textAlign: 'center',
+                        }}>
+                        Chapter 1
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )}
+            />
           </View>
-          {/* <LatestA2 /> */}
-          <View
-            style={{
-              backgroundColor: '#BCBCBC',paddingBottom:10
-              // paddingTop: 95,
-              // paddingBottom: 95,
-            }}>
-            <ImageBackground
-              source={require('../image/Manga2/tokyoRevengerbg.png')}
-              style={{height: 207, width: 400}}>
-              <View style={{marginLeft: 8}}>
-                <Text
+          {/* Manga Sakamoto */}
+          {/* Manga Tokyo Revengers */}
+          <View>
+            <FlatList
+              data={manga2}
+              renderItem={({item}) => (
+                <View
                   style={{
-                    fontWeight: 'bold',
-                    color: 'white',
-                    fontSize: 25,
-                    paddingTop: 170,
+                    backgroundColor: '#BCBCBC',
+                    paddingBottom: 10,
+                    // paddingTop: 95,
+                    // paddingBottom: 95,
                   }}>
-                  Tokyo Revengers
-                </Text>
-              </View>
-            </ImageBackground>
-            <View
-              style={{
-                marginTop: 25,
-                marginHorizontal: 12,
-                marginBottom: 15,
-              }}>
-              <View>
-                <Text style={{fontSize: 12,textAlign:'justify'}}>
-                Takemichi adalah laki-laki pengangguran berusia 26 tahun yang mengetahui bahwa gadis yang dia kencani di sekolah menengah, satu-satunya gadis yang pernah dia kencani, telah meninggal. Kemudian, setelah kecelakaan dia menemukan dirinya dalam lompatan waktu kembali ke tahun-tahun sekolah menengahnya. Dia bersumpah untuk mengubah masa depan dan menyelamatkan gadis itu
-                </Text>
-              </View>
-            </View>
-            <View style={{marginRight: 12, marginBottom: 15, marginLeft: 225}}>
-              <TouchableOpacity
-                style={{
-                  backgroundColor: '#383232',
-                  paddingVertical: 10,
-                  paddingHorizontal: 15,
-                  borderRadius: 20,
-                }}
-                onPress={() => navigation.navigate('MenuDeskripsi')}>
-                <Text
-                  style={{
-                    color: 'white',
-                    fontSize: 17,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                  }}>
-                  Chapter 1
-                </Text>
-              </TouchableOpacity>
-            </View>
+                  <ImageBackground
+                    source={require('../image/Manga2/tokyoRevengerbg.png')}
+                    style={{height: 207, width: 400}}>
+                    <View style={{marginLeft: 8}}>
+                      <Text
+                        style={{
+                          fontWeight: 'bold',
+                          color: 'white',
+                          fontSize: 25,
+                          paddingTop: 170,
+                        }}>
+                        {item.title}
+                      </Text>
+                    </View>
+                  </ImageBackground>
+                  <View
+                    style={{
+                      marginTop: 25,
+                      marginHorizontal: 12,
+                      marginBottom: 15,
+                    }}>
+                    <View>
+                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                        {item.sinopsis}
+                      </Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      marginRight: 12,
+                      marginBottom: 15,
+                      marginLeft: 225,
+                    }}>
+                    <TouchableOpacity
+                      style={{
+                        backgroundColor: '#383232',
+                        paddingVertical: 10,
+                        paddingHorizontal: 15,
+                        borderRadius: 20,
+                      }}
+                      onPress={() => navigation.navigate('MenuDeskripsi')}>
+                      <Text
+                        style={{
+                          color: 'white',
+                          fontSize: 17,
+                          fontWeight: 'bold',
+                          textAlign: 'center',
+                        }}>
+                        Chapter 1
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )}
+            />
           </View>
-          {/* <LatestA2 /> */}
-          <View
-            style={{
-              backgroundColor: '#BCBCBC',
-              // paddingTop: 95,
-              // paddingBottom: 95,
-            }}>
-            <ImageBackground
-              source={require('../image/Manga3/jujutsubg1.png')}
-              style={{height: 207, width: 400}}>
-              <View style={{marginLeft: 8}}>
-                <Text
+          {/* Manga Tokyo Revengers */}
+          {/* Manga Jujutsu Kaisen 3 */}
+          <View>
+            <FlatList
+              data={manga3}
+              renderItem={({item}) => (
+                <View
                   style={{
-                    fontWeight: 'bold',
-                    color: 'white',
-                    fontSize: 25,
-                    paddingTop: 170,
+                    backgroundColor: '#BCBCBC',
+                    // paddingTop: 95,
+                    // paddingBottom: 95,
                   }}>
-                  Jujutsu Kaisen
-                </Text>
-              </View>
-            </ImageBackground>
-            <View
-              style={{
-                marginTop: 25,
-                marginHorizontal: 12,
-                marginBottom: 15,
-              }}>
-              <View>
-                <Text style={{fontSize: 12,textAlign:'justify'}}>
-                Yuuji adalah seorang jenius di jalur dan lapangan. Tapi dia memiliki minat nol, dia senang sebagai clam di Klub Penelitian Ilmu Ghaib. Meskipun Dia di Klub hanya untuk Iseng, Hal-hal menjadi serius ketika semangat nyata muncul di sekolah! Hidup akan menjadi sangat aneh Di SMA Negeri Sugisawa
-                </Text>
-              </View>
-            </View>
-            <View style={{marginRight: 12, marginBottom: 15, marginLeft: 225}}>
-              <TouchableOpacity
-                style={{
-                  backgroundColor: '#383232',
-                  paddingVertical: 10,
-                  paddingHorizontal: 15,
-                  borderRadius: 20,
-                }}
-                onPress={() => navigation.navigate('MenuDeskripsi')}>
-                <Text
-                  style={{
-                    color: 'white',
-                    fontSize: 17,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                  }}>
-                  Chapter 1
-                </Text>
-              </TouchableOpacity>
-            </View>
+                  <ImageBackground
+                    source={require('../image/Manga3/jujutsubg1.png')}
+                    style={{height: 207, width: 400}}>
+                    <View style={{marginLeft: 8}}>
+                      <Text
+                        style={{
+                          fontWeight: 'bold',
+                          color: 'white',
+                          fontSize: 25,
+                          paddingTop: 170,
+                        }}>
+                        {item.title}
+                      </Text>
+                    </View>
+                  </ImageBackground>
+                  <View
+                    style={{
+                      marginTop: 25,
+                      marginHorizontal: 12,
+                      marginBottom: 15,
+                    }}>
+                    <View>
+                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                        {item.sinopsis}
+                      </Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      marginRight: 12,
+                      marginBottom: 15,
+                      marginLeft: 225,
+                    }}>
+                    <TouchableOpacity
+                      style={{
+                        backgroundColor: '#383232',
+                        paddingVertical: 10,
+                        paddingHorizontal: 15,
+                        borderRadius: 20,
+                      }}
+                      onPress={() => navigation.navigate('MenuDeskripsi')}>
+                      <Text
+                        style={{
+                          color: 'white',
+                          fontSize: 17,
+                          fontWeight: 'bold',
+                          textAlign: 'center',
+                        }}>
+                        Chapter 1
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )}
+            />
           </View>
-          {/* <LatestA3 /> */}
-          <View
-            style={{
-              backgroundColor: '#BCBCBC',
-              // paddingTop: 95,
-              // paddingBottom: 95,
-            }}>
-            <ImageBackground
-              source={require('../image/image19.png')}
-              style={{height: 207, width: 400}}>
-              <View style={{marginLeft: 8}}>
-                <Text
+          {/* Manga Jujutsu Kaisen */}
+          {/* Manga Baki 4 */}
+          <View>
+            <FlatList
+              data={manga4}
+              renderItem={({item}) => (
+                <View
                   style={{
-                    fontWeight: 'bold',
-                    color: 'white',
-                    fontSize: 20,
-                    paddingTop: 170,
+                    backgroundColor: '#BCBCBC',
+                    // paddingTop: 95,
+                    // paddingBottom: 95,
                   }}>
-                  BAKI
-                </Text>
-              </View>
-            </ImageBackground>
-            <View
-              style={{
-                marginTop: 25,
-                marginHorizontal: 12,
-                marginBottom: 15,
-              }}>
-              <View>
-              <Text style={{fontSize: 12,textAlign:'justify'}}>
-                Menceritakan seorang pegulat sumo bernama Baki Hanma yang Berumur 17 tahun yang dikenal sebagai petarung yang cukup kuat. Dalam perjalanannya untuk menjadi petarung terhebat, Baki bertarung dengan kemapuan bertarung yang sangat hebat sampai bertarung dengan grandmaster seni bela diri.
-                </Text>
-              </View>
-            </View>
-            <View style={{marginRight: 12, marginBottom: 15, marginLeft: 225}}>
-              <TouchableOpacity
-                style={{
-                  backgroundColor: '#383232',
-                  paddingVertical: 10,
-                  paddingHorizontal: 15,
-                  borderRadius: 20,
-                }}
-                onPress={() => navigation.navigate('MenuDeskripsi')}>
-                <Text
-                  style={{
-                    color: 'white',
-                    fontSize: 17,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                  }}>
-                  Chapter 1
-                </Text>
-              </TouchableOpacity>
-            </View>
+                  <ImageBackground
+                    source={require('../image/image19.png')}
+                    style={{height: 207, width: 400}}>
+                    <View style={{marginLeft: 8}}>
+                      <Text
+                        style={{
+                          fontWeight: 'bold',
+                          color: 'white',
+                          fontSize: 20,
+                          paddingTop: 170,
+                        }}>
+                        {item.title}
+                      </Text>
+                    </View>
+                  </ImageBackground>
+                  <View
+                    style={{
+                      marginTop: 25,
+                      marginHorizontal: 12,
+                      marginBottom: 15,
+                    }}>
+                    <View>
+                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                        {item.sinopsis}
+                      </Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      marginRight: 12,
+                      marginBottom: 15,
+                      marginLeft: 225,
+                    }}>
+                    <TouchableOpacity
+                      style={{
+                        backgroundColor: '#383232',
+                        paddingVertical: 10,
+                        paddingHorizontal: 15,
+                        borderRadius: 20,
+                      }}
+                      onPress={() => navigation.navigate('MenuDeskripsi')}>
+                      <Text
+                        style={{
+                          color: 'white',
+                          fontSize: 17,
+                          fontWeight: 'bold',
+                          textAlign: 'center',
+                        }}>
+                        Chapter 1
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )}
+            />
           </View>
-          {/* <LatestA4 /> */}
-          <View
-            style={{
-              backgroundColor: '#BCBCBC',
-              // paddingTop: 95,
-              // paddingBottom: 95,
-            }}>
-            <ImageBackground
-              source={require('../image/Manga4/sololvlingbg.jpg')}
-              style={{height: 207, width: 400}}>
-              <View style={{marginLeft: 8}}>
-                <Text
+          {/* Manga Baki */}
+          {/* Manga Solo Leveling 5*/}
+          <View>
+            <FlatList
+              data={manga5}
+              renderItem={({item}) => (
+                <View
                   style={{
-                    fontWeight: 'bold',
-                    color: 'white',
-                    fontSize: 20,
-                    paddingTop: 170,
+                    backgroundColor: '#BCBCBC',
+                    // paddingTop: 95,
+                    // paddingBottom: 95,
                   }}>
-                  Solo Leveling
-                </Text>
-              </View>
-            </ImageBackground>
-            <View
-              style={{
-                marginTop: 25,
-                marginHorizontal: 12,
-                marginBottom: 15,
-              }}>
-              <View>
-                <Text style={{fontSize: 12,textAlign:'justify'}}>
-                Menghubungkan dunia nyata dengan dunia monster terbuka, beberapa orang biasa, setiap hari menerima kekuatan untuk berburu monster di dalam Gerbang. Mereka dikenal sebagai "Pemburu". Namun, tidak semua Pemburu kuat. Nama saya Sung Jin-Woo, seorang Pemburu peringkat-E. Saya seseorang yang harus mempertaruhkan nyawanya di ruang bawah tanah paling rendah, "Terlemah di Dunia". 
-                </Text>
-              </View>
-            </View>
-            <View style={{marginRight: 12, marginBottom: 15, marginLeft: 225}}>
-              <TouchableOpacity
-                style={{
-                  backgroundColor: '#383232',
-                  paddingVertical: 10,
-                  paddingHorizontal: 15,
-                  borderRadius: 20,
-                }}
-                onPress={() => navigation.navigate('MenuDeskripsi')}>
-                <Text
-                  style={{
-                    color: 'white',
-                    fontSize: 17,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                  }}>
-                  Chapter 1
-                </Text>
-              </TouchableOpacity>
-            </View>
+                  <ImageBackground
+                    source={require('../image/Manga4/sololvlingbg.jpg')}
+                    style={{height: 207, width: 400}}>
+                    <View style={{marginLeft: 8}}>
+                      <Text
+                        style={{
+                          fontWeight: 'bold',
+                          color: 'white',
+                          fontSize: 20,
+                          paddingTop: 170,
+                        }}>
+                        {item.title}
+                      </Text>
+                    </View>
+                  </ImageBackground>
+                  <View
+                    style={{
+                      marginTop: 25,
+                      marginHorizontal: 12,
+                      marginBottom: 15,
+                    }}>
+                    <View>
+                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                        {item.sinopsis}
+                      </Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      marginRight: 12,
+                      marginBottom: 15,
+                      marginLeft: 225,
+                    }}>
+                    <TouchableOpacity
+                      style={{
+                        backgroundColor: '#383232',
+                        paddingVertical: 10,
+                        paddingHorizontal: 15,
+                        borderRadius: 20,
+                      }}
+                      onPress={() => navigation.navigate('MenuDeskripsi')}>
+                      <Text
+                        style={{
+                          color: 'white',
+                          fontSize: 17,
+                          fontWeight: 'bold',
+                          textAlign: 'center',
+                        }}>
+                        Chapter 1
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )}
+            />
           </View>
-          {/* <LatestA5 /> */}
-          <View
-            style={{
-              backgroundColor: '#BCBCBC',
-              // paddingTop: 95,
-              // paddingBottom: 95,
-            }}>
-            <ImageBackground
-              source={require('../image/Manga5/kmybg.jpg')}
-              style={{height: 207, width: 400}}>
-              <View style={{marginLeft: 8}}>
-                <Text
+          {/* Manga Solo Leveling */}
+          {/* Manga Kimetsu No Yaiba 6*/}
+          <View>
+            <FlatList
+              data={manga6}
+              renderItem={({item}) => (
+                <View
                   style={{
-                    fontWeight: 'bold',
-                    color: 'white',
-                    fontSize: 20,
-                    paddingTop: 170,
+                    backgroundColor: '#BCBCBC',
+                    // paddingTop: 95,
+                    // paddingBottom: 95,
                   }}>
-                   Kimetsu no Yaiba 
-                </Text>
-              </View>
-            </ImageBackground>
-            <View
-              style={{
-                marginTop: 25,
-                marginHorizontal: 12,
-                marginBottom: 15,
-              }}>
-              <View>
-                <Text style={{fontSize: 15,textAlign:'justify'}}>
-                Banyak rumor tentang setan pemakan manusia yang bersembunyi di hutan. Karena itu, warga kota setempat tidak pernah keluar rumah pada malam hari. Legenda mengatakan bahwa pembunuh iblis juga berkeliaran di malam hari, memburu setan haus darah ini. Sejak kematian ayahnya, Tanjirou telah mengambil alih dirinya untuk menghidupi ibu dan lima saudara kandungnya. Meskipun hidup mereka mungkin diperkeras oleh tragedi, mereka telah menemukan kebahagiaan. 
-                </Text>
-              </View>
-            </View>
-            <View style={{marginRight: 12, marginBottom: 15, marginLeft: 225}}>
-              <TouchableOpacity
-                style={{
-                  backgroundColor: '#383232',
-                  paddingVertical: 10,
-                  paddingHorizontal: 15,
-                  borderRadius: 20,
-                }}
-                onPress={() => navigation.navigate('MenuDeskripsi')}>
-                <Text
-                  style={{
-                    color: 'white',
-                    fontSize: 17,
-                    fontWeight: 'bold',
-                    textAlign: 'center',
-                  }}>
-                  Chapter 1
-                </Text>
-              </TouchableOpacity>
-            </View>
+                  <ImageBackground
+                    source={require('../image/Manga5/kmybg.jpg')}
+                    style={{height: 207, width: 400}}>
+                    <View style={{marginLeft: 8}}>
+                      <Text
+                        style={{
+                          fontWeight: 'bold',
+                          color: 'white',
+                          fontSize: 20,
+                          paddingTop: 170,
+                        }}>
+                        {item.title}
+                      </Text>
+                    </View>
+                  </ImageBackground>
+                  <View
+                    style={{
+                      marginTop: 25,
+                      marginHorizontal: 12,
+                      marginBottom: 15,
+                    }}>
+                    <View>
+                      <Text style={{fontSize: 15, textAlign: 'justify'}}>
+                        {item.sinopsis}
+                      </Text>
+                    </View>
+                  </View>
+                  <View
+                    style={{
+                      marginRight: 12,
+                      marginBottom: 15,
+                      marginLeft: 225,
+                    }}>
+                    <TouchableOpacity
+                      style={{
+                        backgroundColor: '#383232',
+                        paddingVertical: 10,
+                        paddingHorizontal: 15,
+                        borderRadius: 20,
+                      }}
+                      onPress={() => navigation.navigate('MenuDeskripsi')}>
+                      <Text
+                        style={{
+                          color: 'white',
+                          fontSize: 17,
+                          fontWeight: 'bold',
+                          textAlign: 'center',
+                        }}>
+                        Chapter 1
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )}
+            />
           </View>
+          {/* Manga Kimetsu No Yaiba */}
         </ScrollView>
       </ImageBackground>
     </View>

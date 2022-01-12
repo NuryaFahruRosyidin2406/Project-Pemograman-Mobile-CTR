@@ -14,9 +14,11 @@ import firestore from '@react-native-firebase/firestore';
 const MenuFavorite = ({navigation}) => {
   // penggunaan api
   const [users, setUsers] = React.useState([]);
+  const [manga, setManga] = React.useState([]);
 
   useEffect(() => {
     getUser();
+    getManga();
   });
 
   const getUser = async () => {
@@ -34,6 +36,24 @@ const MenuFavorite = ({navigation}) => {
           });
         });
         setUsers(users);
+      });
+  };
+
+  const getManga = async () => {
+    firestore()
+      .collection('Manga')
+      .get()
+      .then(querySnapshot => {
+        const manga = [];
+        querySnapshot.forEach(doc => {
+          console.log(doc.data());
+          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+          manga.push({
+            ...doc.data(),
+            key: doc.id,
+          });
+        });
+        setManga(manga);
       });
   };
   // penggunaan api
@@ -89,7 +109,7 @@ const MenuFavorite = ({navigation}) => {
           <View>
             <Text>Tutorial Firestore</Text>
             <FlatList
-              data={users}
+              data={manga}
               renderItem={({item}) => (
                 <View
                   style={{
@@ -97,11 +117,11 @@ const MenuFavorite = ({navigation}) => {
                     flex: 1,
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontWeight: 'bold',
                   }}>
-                  <Text>Nama: {item.nama}</Text>
-                  <Text>NIM: {item.nim}</Text>
-                  <Text>Prodi: {item.prodi}</Text>
+                  <Text style={{fontSize: 17, fontWeight: 'bold'}}>
+                    Title: {item.title}
+                  </Text>
+                  <Text>Sinopsis: {item.sinopsis}</Text>
                 </View>
               )}
             />
