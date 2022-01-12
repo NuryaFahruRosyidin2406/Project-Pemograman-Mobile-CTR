@@ -73,7 +73,7 @@ const MenuFavorite = ({navigation}) => {
         <ImageBackground
           source={require('../image/background2/1x/background2mdpi.png')}
           style={{flex: 1}}>
-          {/* <View style={{paddingVertical: 260}}>
+          <View style={{paddingVertical: 260}}>
             <Text
               style={{
                 color: '#20232A',
@@ -104,9 +104,9 @@ const MenuFavorite = ({navigation}) => {
               }}>
               I will tell you when new chapter are added
             </Text>
-          </View> */}
+          </View>
           {/* coba api */}
-          <View>
+          {/* <View>
             <Text>Tutorial Firestore</Text>
             <FlatList
               data={manga}
@@ -126,7 +126,7 @@ const MenuFavorite = ({navigation}) => {
               )}
             />
           </View>
-          {/* coba api */}
+          coba api */}
         </ImageBackground>
       </View>
     </View>

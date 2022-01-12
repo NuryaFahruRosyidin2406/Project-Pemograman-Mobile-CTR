@@ -14,7 +14,7 @@ const MangaI = () => {
           <Button
             title="Versa..."
             color="#211D1D"
-            onPress={() => navigation.navigate('MenuLogin')}
+            // onPress={() => navigation.navigate('MenuLogin')}
           />
         </View>
       </View>

@@ -14,7 +14,7 @@ const MangaJ = () => {
           <Button
             title="Kuro.."
             color="#211D1D"
-            onPress={() => navigation.navigate('MenuLogin')}
+            // onPress={() => navigation.navigate('MenuLogin')}
           />
         </View>
       </View>

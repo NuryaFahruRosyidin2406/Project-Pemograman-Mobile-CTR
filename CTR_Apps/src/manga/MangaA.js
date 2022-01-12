@@ -10,7 +10,11 @@ import {
 
 const MangaA = () => {
   return (
-    <View style={{marginRight: 12, marginVertical: 10}}>
+    <View
+      style={{
+        marginRight: 12,
+        marginVertical: 10,
+      }}>
       <View style={{}}>
         <ImageBackground
           source={require('../image/Mangag1/BokunoHeroAcademia.png')}
@@ -21,7 +25,7 @@ const MangaA = () => {
             <Button
               title="Boku No..."
               color="#211D1D"
-              onPress={() => navigation.navigate('MenuLogin')}
+              // onPress={() => navigation.navigate('MenuLogin')}
             />
           </View>
         </View>
