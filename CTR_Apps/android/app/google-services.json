@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "173295890929",
+    "project_id": "ctrapps-385f5",
+    "storage_bucket": "ctrapps-385f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173295890929:android:01a218ab02ce712c0e9450",
+        "android_client_info": {
+          "package_name": "com.ctr_apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173295890929-m1ab48hl7fbq2gvdvevu7ke9rnntvh6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk9dGOsG9XP4v37RJ7XA6Nd9ok2Wd3dHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173295890929-m1ab48hl7fbq2gvdvevu7ke9rnntvh6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
