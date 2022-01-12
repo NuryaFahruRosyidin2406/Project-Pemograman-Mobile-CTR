@@ -1,23 +1,23 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image,Button} from 'react-native';
 
 const MangaI = () => {
   return (
     <View style={{marginRight: 12, marginVertical: 10}}>
       <View>
         <Image
-          source={require('../image/manga1.png')}
+          source={require('../image/Mangag1/VersatileMage.png')}
           style={{width: 110, height: 140}}></Image>
       </View>
-      <Text
-        style={{
-          fontSize: 16,
-          fontWeight: 'bold',
-          color: 'black',
-          textAlign: 'center',
-        }}>
-        Manga
-      </Text>
+      <View style={{}}>
+          <View style={{paddingHorizontal: 0}}>
+            <Button
+              title="Versa..."
+              color="#211D1D"
+              onPress={() => navigation.navigate('MenuLogin')}
+            />
+            </View>
+      </View> 
     </View>
   );
 };
