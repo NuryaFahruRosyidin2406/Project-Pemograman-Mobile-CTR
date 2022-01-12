@@ -62,7 +62,7 @@ const MenuAccount = ({navigation}) => {
               <Button
                 title="Setting"
                 color="#211D1D"
-                onPress={() => navigation.navigate('MenuLogin')}
+                onPress={() => navigation.navigate('MenuBaca')}
               />
               </View>
 

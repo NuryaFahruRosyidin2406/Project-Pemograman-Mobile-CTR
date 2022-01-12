@@ -69,6 +69,13 @@ function App({navigation}) {
           component={MenuFavorite}
           options={{headerShown: false}}
         />
+        <Stack.Screen
+          name="MenuBaca"
+          component={MenuBaca}
+          options={{headerShown: false}}
+        />
+
+      
       </Stack.Navigator>
     </NavigationContainer>
   );

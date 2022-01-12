@@ -7,6 +7,7 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity
+  ,Button
 } from 'react-native';
 
 const MenuDeskripsi = ({navigation}) => {
@@ -79,6 +80,30 @@ const MenuDeskripsi = ({navigation}) => {
                 </Text>
               </TouchableOpacity>
             </View>
+
+            <View style={{}}>
+              <View style={{paddingTop:5,resizeMode: "contain",
+            height: 50,
+            width: 300}}>
+              <Button
+                title="Chapter 1"
+                color="#211D1D"
+                onPress={() => navigation.navigate('MenuBaca')}
+              />
+              </View>
+            </View>
+            <View style={{}}>
+              <View style={{paddingTop:5,resizeMode: "contain",
+            height: 50,
+            width: 300}}>
+              <Button
+                title="Back"
+                color="#211D1D"
+                onPress={() => navigation.navigate('MenuLatest')}
+              />
+              </View>
+            </View>
+
           </ImageBackground>
         </View>
 
