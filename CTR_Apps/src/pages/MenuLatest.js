@@ -9,139 +9,139 @@ import {
   ScrollView,
   FlatList,
 } from 'react-native';
-import firestore from '@react-native-firebase/firestore';
+// import firestore from '@react-native-firebase/firestore';
 
 const MenuLatest = ({navigation}) => {
   // penggunaan api
-  const [manga, setManga] = React.useState([]);
-  const [manga2, setManga2] = React.useState([]);
-  const [manga3, setManga3] = React.useState([]);
-  const [manga4, setManga4] = React.useState([]);
-  const [manga5, setManga5] = React.useState([]);
-  const [manga6, setManga6] = React.useState([]);
+  // const [manga, setManga] = React.useState([]);
+  // const [manga2, setManga2] = React.useState([]);
+  // const [manga3, setManga3] = React.useState([]);
+  // const [manga4, setManga4] = React.useState([]);
+  // const [manga5, setManga5] = React.useState([]);
+  // const [manga6, setManga6] = React.useState([]);
 
-  useEffect(() => {
-    getManga();
-    getManga2();
-    getManga3();
-    getManga4();
-    getManga5();
-    getManga6();
-  });
+  // useEffect(() => {
+  //   getManga();
+  //   getManga2();
+  //   getManga3();
+  //   getManga4();
+  //   getManga5();
+  //   getManga6();
+  // });
 
   // memakai api Manga
-  const getManga = async () => {
-    firestore()
-      .collection('Manga')
-      .get()
-      .then(querySnapshot => {
-        const manga = [];
-        querySnapshot.forEach(doc => {
-          console.log(doc.data());
-          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
-          manga.push({
-            ...doc.data(),
-            key: doc.id,
-          });
-        });
-        setManga(manga);
-      });
-  };
+  // const getManga = async () => {
+  //   firestore()
+  //     .collection('Manga')
+  //     .get()
+  //     .then(querySnapshot => {
+  //       const manga = [];
+  //       querySnapshot.forEach(doc => {
+  //         console.log(doc.data());
+  //         // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+  //         manga.push({
+  //           ...doc.data(),
+  //           key: doc.id,
+  //         });
+  //       });
+  //       setManga(manga);
+  //     });
+  // };
 
-  // memakai api Manga2
-  const getManga2 = async () => {
-    firestore()
-      .collection('Manga2')
-      .get()
-      .then(querySnapshot => {
-        const manga2 = [];
-        querySnapshot.forEach(doc => {
-          console.log(doc.data());
-          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
-          manga2.push({
-            ...doc.data(),
-            key: doc.id,
-          });
-        });
-        setManga2(manga2);
-      });
-  };
+  // // memakai api Manga2
+  // const getManga2 = async () => {
+  //   firestore()
+  //     .collection('Manga2')
+  //     .get()
+  //     .then(querySnapshot => {
+  //       const manga2 = [];
+  //       querySnapshot.forEach(doc => {
+  //         console.log(doc.data());
+  //         // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+  //         manga2.push({
+  //           ...doc.data(),
+  //           key: doc.id,
+  //         });
+  //       });
+  //       setManga2(manga2);
+  //     });
+  // };
 
-  // memakai api Manga3
-  const getManga3 = async () => {
-    firestore()
-      .collection('Manga3')
-      .get()
-      .then(querySnapshot => {
-        const manga3 = [];
-        querySnapshot.forEach(doc => {
-          console.log(doc.data());
-          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
-          manga3.push({
-            ...doc.data(),
-            key: doc.id,
-          });
-        });
-        setManga3(manga3);
-      });
-  };
+  // // memakai api Manga3
+  // const getManga3 = async () => {
+  //   firestore()
+  //     .collection('Manga3')
+  //     .get()
+  //     .then(querySnapshot => {
+  //       const manga3 = [];
+  //       querySnapshot.forEach(doc => {
+  //         console.log(doc.data());
+  //         // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+  //         manga3.push({
+  //           ...doc.data(),
+  //           key: doc.id,
+  //         });
+  //       });
+  //       setManga3(manga3);
+  //     });
+  // };
 
-  // memakai api Manga4
-  const getManga4 = async () => {
-    firestore()
-      .collection('Manga4')
-      .get()
-      .then(querySnapshot => {
-        const manga4 = [];
-        querySnapshot.forEach(doc => {
-          console.log(doc.data());
-          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
-          manga4.push({
-            ...doc.data(),
-            key: doc.id,
-          });
-        });
-        setManga4(manga4);
-      });
-  };
+  // // memakai api Manga4
+  // const getManga4 = async () => {
+  //   firestore()
+  //     .collection('Manga4')
+  //     .get()
+  //     .then(querySnapshot => {
+  //       const manga4 = [];
+  //       querySnapshot.forEach(doc => {
+  //         console.log(doc.data());
+  //         // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+  //         manga4.push({
+  //           ...doc.data(),
+  //           key: doc.id,
+  //         });
+  //       });
+  //       setManga4(manga4);
+  //     });
+  // };
 
-  // memakai api Manga5
-  const getManga5 = async () => {
-    firestore()
-      .collection('Manga5')
-      .get()
-      .then(querySnapshot => {
-        const manga5 = [];
-        querySnapshot.forEach(doc => {
-          console.log(doc.data());
-          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
-          manga5.push({
-            ...doc.data(),
-            key: doc.id,
-          });
-        });
-        setManga5(manga5);
-      });
-  };
+  // // memakai api Manga5
+  // const getManga5 = async () => {
+  //   firestore()
+  //     .collection('Manga5')
+  //     .get()
+  //     .then(querySnapshot => {
+  //       const manga5 = [];
+  //       querySnapshot.forEach(doc => {
+  //         console.log(doc.data());
+  //         // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+  //         manga5.push({
+  //           ...doc.data(),
+  //           key: doc.id,
+  //         });
+  //       });
+  //       setManga5(manga5);
+  //     });
+  // };
 
-  // memakai api Manga6
-  const getManga6 = async () => {
-    firestore()
-      .collection('Manga6')
-      .get()
-      .then(querySnapshot => {
-        const manga6 = [];
-        querySnapshot.forEach(doc => {
-          console.log(doc.data());
-          // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
-          manga6.push({
-            ...doc.data(),
-            key: doc.id,
-          });
-        });
-        setManga6(manga6);
-      });
-  };
+  // // memakai api Manga6
+  // const getManga6 = async () => {
+  //   firestore()
+  //     .collection('Manga6')
+  //     .get()
+  //     .then(querySnapshot => {
+  //       const manga6 = [];
+  //       querySnapshot.forEach(doc => {
+  //         console.log(doc.data());
+  //         // data tiap dokumen dimasukkan ke array state lalu di masukkan ke data flatlist
+  //         manga6.push({
+  //           ...doc.data(),
+  //           key: doc.id,
+  //         });
+  //       });
+  //       setManga6(manga6);
+  //     });
+  // };
 
   return (
     <View style={{flex: 1}}>
@@ -176,14 +176,27 @@ const MenuLatest = ({navigation}) => {
               LATEST
             </Text>
           </TouchableOpacity>
+
+          <TouchableOpacity
+            style={{
+              backgroundColor: '#383232',
+              paddingVertical: 7,
+              paddingHorizontal: 76,
+            }}
+            onPress={() => navigation.navigate('MenuGenre')}>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
+              GENRE
+            </Text>
+          </TouchableOpacity>
+
         </View>
         {/* Bagian Home dan Latest */}
         <ScrollView>
           {/* Manga Sakamoto */}
           <View>
-            <FlatList
+            {/* <FlatList
               data={manga}
-              renderItem={({item}) => (
+              renderItem={({item}) => ( */}
                 <View
                   style={{
                     backgroundColor: '#BCBCBC',
@@ -201,7 +214,7 @@ const MenuLatest = ({navigation}) => {
                           fontSize: 25,
                           paddingTop: 170,
                         }}>
-                        {item.title}
+                        {/* {item.title} */}asd
                       </Text>
                     </View>
                   </ImageBackground>
@@ -213,7 +226,7 @@ const MenuLatest = ({navigation}) => {
                     }}>
                     <View style={{}}>
                       <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {item.sinopsis}
+                        {/* {item.sinopsis} */}asd
                       </Text>
                     </View>
                   </View>
@@ -243,15 +256,15 @@ const MenuLatest = ({navigation}) => {
                     </TouchableOpacity>
                   </View>
                 </View>
-              )}
-            />
+              {/* )}
+            /> */}
           </View>
           {/* Manga Sakamoto */}
           {/* Manga Tokyo Revengers */}
           <View>
-            <FlatList
+            {/* <FlatList
               data={manga2}
-              renderItem={({item}) => (
+              renderItem={({item}) => ( */}
                 <View
                   style={{
                     backgroundColor: '#BCBCBC',
@@ -270,7 +283,7 @@ const MenuLatest = ({navigation}) => {
                           fontSize: 25,
                           paddingTop: 170,
                         }}>
-                        {item.title}
+                        {/* {item.title} */}asd
                       </Text>
                     </View>
                   </ImageBackground>
@@ -282,7 +295,7 @@ const MenuLatest = ({navigation}) => {
                     }}>
                     <View>
                       <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {item.sinopsis}
+                        {/* {item.sinopsis} */}asd
                       </Text>
                     </View>
                   </View>
@@ -312,15 +325,15 @@ const MenuLatest = ({navigation}) => {
                     </TouchableOpacity>
                   </View>
                 </View>
-              )}
-            />
+              {/* )}
+            /> */}
           </View>
           {/* Manga Tokyo Revengers */}
           {/* Manga Jujutsu Kaisen 3 */}
           <View>
-            <FlatList
+            {/* <FlatList
               data={manga3}
-              renderItem={({item}) => (
+              renderItem={({item}) => ( */}
                 <View
                   style={{
                     backgroundColor: '#BCBCBC',
@@ -338,7 +351,7 @@ const MenuLatest = ({navigation}) => {
                           fontSize: 25,
                           paddingTop: 170,
                         }}>
-                        {item.title}
+                        {/* {item.title} */}asd
                       </Text>
                     </View>
                   </ImageBackground>
@@ -350,7 +363,7 @@ const MenuLatest = ({navigation}) => {
                     }}>
                     <View>
                       <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {item.sinopsis}
+                        {/* {item.sinopsis} */}asd
                       </Text>
                     </View>
                   </View>
@@ -380,15 +393,15 @@ const MenuLatest = ({navigation}) => {
                     </TouchableOpacity>
                   </View>
                 </View>
-              )}
-            />
+              {/* )}
+            /> */}
           </View>
           {/* Manga Jujutsu Kaisen */}
           {/* Manga Baki 4 */}
           <View>
-            <FlatList
-              data={manga4}
-              renderItem={({item}) => (
+            {/* <FlatList */}
+              {/* data={manga4} */}
+              {/* renderItem={({item}) => ( */}
                 <View
                   style={{
                     backgroundColor: '#BCBCBC',
@@ -406,7 +419,7 @@ const MenuLatest = ({navigation}) => {
                           fontSize: 20,
                           paddingTop: 170,
                         }}>
-                        {item.title}
+                        {/* {item.title} */}asd
                       </Text>
                     </View>
                   </ImageBackground>
@@ -418,7 +431,7 @@ const MenuLatest = ({navigation}) => {
                     }}>
                     <View>
                       <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {item.sinopsis}
+                        {/* {item.sinopsis} */}asd
                       </Text>
                     </View>
                   </View>
@@ -448,15 +461,15 @@ const MenuLatest = ({navigation}) => {
                     </TouchableOpacity>
                   </View>
                 </View>
-              )}
-            />
+              {/* )} */}
+            {/* /> */}
           </View>
           {/* Manga Baki */}
           {/* Manga Solo Leveling 5*/}
           <View>
-            <FlatList
-              data={manga5}
-              renderItem={({item}) => (
+            {/* <FlatList */}
+              {/* data={manga5} */}
+              {/* renderItem={({item}) => ( */}
                 <View
                   style={{
                     backgroundColor: '#BCBCBC',
@@ -474,7 +487,7 @@ const MenuLatest = ({navigation}) => {
                           fontSize: 20,
                           paddingTop: 170,
                         }}>
-                        {item.title}
+                        {/* {item.title} */}asd
                       </Text>
                     </View>
                   </ImageBackground>
@@ -486,7 +499,7 @@ const MenuLatest = ({navigation}) => {
                     }}>
                     <View>
                       <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {item.sinopsis}
+                        {/* {item.sinopsis} */}asd
                       </Text>
                     </View>
                   </View>
@@ -516,15 +529,15 @@ const MenuLatest = ({navigation}) => {
                     </TouchableOpacity>
                   </View>
                 </View>
-              )}
-            />
+              {/*  )} */}
+            {/*  /> */}
           </View>
           {/* Manga Solo Leveling */}
           {/* Manga Kimetsu No Yaiba 6*/}
           <View>
-            <FlatList
-              data={manga6}
-              renderItem={({item}) => (
+            {/* <FlatList */}
+              {/* data={manga6} */}
+              {/* renderItem={({item}) => ( */}
                 <View
                   style={{
                     backgroundColor: '#BCBCBC',
@@ -542,7 +555,7 @@ const MenuLatest = ({navigation}) => {
                           fontSize: 20,
                           paddingTop: 170,
                         }}>
-                        {item.title}
+                        {/* {item.title} */}asd
                       </Text>
                     </View>
                   </ImageBackground>
@@ -553,8 +566,8 @@ const MenuLatest = ({navigation}) => {
                       marginBottom: 15,
                     }}>
                     <View>
-                      <Text style={{fontSize: 15, textAlign: 'justify'}}>
-                        {item.sinopsis}
+                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                        {/* {item.sinopsis} */}asd
                       </Text>
                     </View>
                   </View>
@@ -584,8 +597,8 @@ const MenuLatest = ({navigation}) => {
                     </TouchableOpacity>
                   </View>
                 </View>
-              )}
-            />
+              {/* )} */}
+            {/* /> */}
           </View>
           {/* Manga Kimetsu No Yaiba */}
         </ScrollView>

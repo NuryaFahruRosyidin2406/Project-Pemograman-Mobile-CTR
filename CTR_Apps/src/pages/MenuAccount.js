@@ -26,7 +26,7 @@ const MenuAccount = ({navigation}) => {
         </View>
         <View style={{flex: 1}}>
           <ImageBackground
-            source={require('../image/background2/0.75x/background2ldpi.png')}
+            source={require('../image/bgcb.png')}
             style={{flex: 1}}>
               <ImageBackground source={require('../image/ellipse.png')} style={{height:200}}> 
               <View style={{paddingTop:100}}>
@@ -42,7 +42,7 @@ const MenuAccount = ({navigation}) => {
               <Button
                 title="Username"
                 color="#211D1D"
-                onPress={() => navigation.navigate('MenuLogin')}
+                onPress={() => navigation.navigate('MenuDeskripsi')}
               />
               </View>
 

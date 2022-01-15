@@ -23,7 +23,7 @@ const MenuRecent = ({navigation}) => {
         </View>
         <View style={{flex: 1}}>
           <ImageBackground
-            source={require('../image/background2/0.75x/background2ldpi.png')}
+            source={require('../image/bgcb.png')}
             style={{flex: 1}}>
             <View style={{paddingVertical: 280}}>
               <Text

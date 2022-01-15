@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,13 +8,41 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity
-  ,Button
+  ,Button,
+  FlatList
 } from 'react-native';
 
+
+
+
 const MenuDeskripsi = ({navigation}) => {
+  const hotURL = "https://api.jikan.moe/v4/manga/23390";
+
+  // const [data, setData] = useState({});
+  const [imgbg, setImgBg] = useState('');
+  const [desc, setDesc] = useState('');
+  const [title, setTitle] = useState('');
+  const [img, setImg] = useState('');
+  const [genre, setGenre] = useState('');
+
+  
+ fetch(hotURL)
+        .then(response => response.json())
+        .then(json => {
+          setImgBg(json.data.images.jpg.large_image_url)
+          setDesc(json.data.synopsis)
+          setTitle(json.data.title)
+          setImg(json.data.images.jpg.image_url)
+          setGenre(json.data.authors[0].name)
+         
+        })
+        .catch((error) => alert(error));
+
+
+
   return (
-    <>
       <View style={{flex: 1}}>
+        <ScrollView>
         <View
           style={{
             backgroundColor: '#383232',
@@ -28,9 +57,9 @@ const MenuDeskripsi = ({navigation}) => {
             source={require('../image/mangadis.png')}
             style={{flex: 1}}>
             <View>
-              <ImageBackground source={require('../image/Manga1/skdaysbg.png')} style={{height:220,width:400}} >
+              <ImageBackground source={{uri:imgbg}} style={{height:220,width:400}} >
               <View style={{height:180,width:140,paddingTop:120,paddingLeft:25}} >
-                <Image source={require('../image/Manga1/sakamoto.png')} style={{height:180,width:140}}>
+                <Image source={{uri:img}} style={{height:180,width:140}}>
                 </Image>
               </View>
               </ImageBackground>
@@ -51,14 +80,23 @@ const MenuDeskripsi = ({navigation}) => {
                     fontWeight: 'bold',
                     textAlign: 'center',
                   }}>
-                  Sakamoto Days
+                  {title}
                 </Text>
               </View>
             </View>
+
+
+            <View style={{borderRadius:20,height:30,backgroundColor:'white'}}>
+                  <Text style={{color:'black'}}> {genre} </Text>
+            </View>
+
             <View>
-                <Text style={{fontSize:12,textAlign:'justify'}}> Bercerita tentang Taro Sakamoto adalah pembunuh utama, ditakuti oleh penjahat dan dikagumi oleh pembunuh bayaran. Tapi suatu hari ... dia jatuh cinta! Pensiun, pernikahan, menjadi ayah, dan kemudian ... Sakamoto bertambah gemuk! Pria gemuk yang menjalankan toko lingkungan sebenarnya adalah mantan pembunuh bayaran legendaris! Bisakah dia melindungi keluarganya dari bahaya?
+                <Text style={{fontSize:12,textAlign:'justify',}}>{desc}
                 </Text>
                 </View>
+
+
+               <View style={{flexDirection:'column-reverse'}}>
                 <View style={{marginRight: 12, marginBottom: 15, marginLeft: 259}}>
               <TouchableOpacity
                 style={{
@@ -66,8 +104,9 @@ const MenuDeskripsi = ({navigation}) => {
                   paddingVertical: 10,
                   paddingHorizontal: 15,
                   borderRadius: 20,
+                  marginTop:-100
                 }}
-                onPress={() => navigation.navigate('MenuDeskripsi')}>
+                onPress={() => navigation.navigate('MenuDownload')}>
                   <Image source={require('../image/download.png')} ></Image>
                 <Text
                   style={{
@@ -82,33 +121,38 @@ const MenuDeskripsi = ({navigation}) => {
             </View>
 
             <View style={{}}>
-              <View style={{paddingTop:5,resizeMode: "contain",
+            <View style={{paddingTop:5,resizeMode: "contain",
             height: 50,
-            width: 300}}>
+            width: 200}}>
               <Button
                 title="Chapter 1"
                 color="#211D1D"
                 onPress={() => navigation.navigate('MenuBaca')}
               />
               </View>
-            </View>
-            <View style={{}}>
-              <View style={{paddingTop:5,resizeMode: "contain",
+            
+              <View style={{
+            paddingTop:5,
+            resizeMode: "contain",
             height: 50,
-            width: 300}}>
+            width: 200,}}>
               <Button
                 title="Back"
                 color="#211D1D"
                 onPress={() => navigation.navigate('MenuLatest')}
-              />
+                />
               </View>
-            </View>
+      
+                </View>
+                </View>   
+              
 
           </ImageBackground>
         </View>
+        </ScrollView>
 
       </View>
-    </>
+    
   );
 };
 

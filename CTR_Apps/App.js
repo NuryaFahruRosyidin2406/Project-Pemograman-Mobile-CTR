@@ -14,6 +14,7 @@ import MenuFavorite from './src/pages/MenuFavorite';
 import MenuRecent from './src/pages/MenuRecent';
 import MenuDownload from './src/pages/MenuDownload';
 import MenuAccount from './src/pages/MenuAccount';
+import MenuGenre from './src/pages/MenuGenre';
 import SplashScreen from './src/pages/SplashScreen';
 
 const Stack = createNativeStackNavigator();
@@ -74,6 +75,18 @@ function App({navigation}) {
           component={MenuBaca}
           options={{headerShown: false}}
         />
+        {/* <Stack.Screen
+          name="MenuGenre"
+          component={MenuGenre}
+          options={{headerShown: false}}
+        /> */}
+        <Stack.Screen
+          name="MenuDownload"
+          component={MenuDownload}
+          options={{headerShown: false}}
+        />
+        
+        
 
       
       </Stack.Navigator>
@@ -95,6 +108,17 @@ function BottomTabs() {
           tabBarIcon: ({color, size}) => (
             <Icon name="home-outline" color={color} size={size} />
           ),
+        }}
+      />
+      <Tab.Screen
+        name="MenuGenre"
+        component={MenuGenre}
+        options={{
+          // tabBarLabel: 'Genre',
+          headerShown: false,
+          // tabBarIcon: ({color, size}) => (
+          //   <Icon name="person-circle-outline" color={color} size={size} />
+          // ),
         }}
       />
       <Tab.Screen
