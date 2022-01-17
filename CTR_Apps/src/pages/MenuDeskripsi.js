@@ -310,7 +310,7 @@ const MenuDeskripsi = ({route, navigation}) => {
                   <Button
                     title="Chapter 1"
                     color="#211D1D"
-                    onPress={() => navigation.navigate('MenuHome')}
+                    onPress={() => navigation.navigate('MenuBaca')}
                   />
                 </View>
 
