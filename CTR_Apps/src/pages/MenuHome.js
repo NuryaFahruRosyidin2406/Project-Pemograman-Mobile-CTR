@@ -8,7 +8,7 @@ import {
   Button,
   ImageBackground,
   TouchableOpacity,
-  FlatList
+  FlatList,
 } from 'react-native';
 import MangaA from '../manga/MangaA';
 import MangaB from '../manga/MangaB';
@@ -21,10 +21,9 @@ import MangaH from '../manga/MangaH';
 import MangaI from '../manga/MangaI';
 import MangaJ from '../manga/MangaJ';
 
-const hotURL = "https://api.jikan.moe/v4/recommendations/manga";
+const hotURL = 'https://api.jikan.moe/v4/recommendations/manga';
 
 const MenuHome = ({navigation}) => {
-  
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
@@ -33,28 +32,42 @@ const MenuHome = ({navigation}) => {
       .then(response => response.json())
       .then(json => {
         setData(json.data);
-
       })
-      .catch((error) => alert(error))
+      .catch(error => alert(error))
       .finally(setLoading(false));
   }, []);
 
-  async function getTopMangaAsync(){
+  async function getTopMangaAsync() {
     try {
       let response = await fetch(hotURL);
       let json = await response.json();
       setData(json.data);
-      setLoading(false)
+      setLoading(false);
     } catch (error) {
       alert(error);
     }
   }
 
+  const cutStr = (str, index = 6) => {
+    const arr = str.split('');
+
+    let result = '';
+
+    arr.map((el, idx) => {
+      if (idx < index) {
+        result += el;
+      }
+    });
+    // result += '...';
+    if (result.length < index) {
+      result;
+    } else result += '...';
+    return result;
+  };
+
   return (
-    <View style={{flex: 1}} >
-      <ImageBackground
-        source={require('../image/bgcb.png')}
-        style={{flex: 1}}>
+    <View style={{flex: 1}}>
+      <ImageBackground source={require('../image/bgcb.png')} style={{flex: 1}}>
         <View
           style={{
             flexDirection: 'row',
@@ -94,50 +107,51 @@ const MenuHome = ({navigation}) => {
               GENRE
             </Text>
           </TouchableOpacity>
-          
-
         </View>
 
-        <ScrollView horizontal={true}
-              style={{
-                flexDirection: 'row',
-                // backgroundColor: 'pink',
-                marginHorizontal: -2,
-                paddingHorizontal: 0,}}>
+        <ScrollView
+          horizontal={true}
+          style={{
+            flexDirection: 'row',
+            backgroundColor: 'white',
+            marginHorizontal: -2,
+            paddingHorizontal: 0,
+          }}>
+          <FlatList
+            data={data}
+            horizontal={true}
+            keyExtractor={({mal_id}, index) => mal_id}
+            renderItem={({item}) => (
+              <ImageBackground
+                source={{uri: item.entry[0].images.webp.large_image_url}}
+                style={{height: 260, width: 410}}>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: 'white',
+                    paddingVertical: 7,
+                    paddingHorizontal: 76,
+                    top: 135,
+                    borderRadius: 25,
+                    borderWidth: 1,
+                    borderStyle: 'solid',
+                    alignItems: 'center',
+                    alignContent: 'center',
+                  }}
+                  onPress={() =>
+                    navigation.navigate('MenuDeskripsi', {
+                      mal_id: item.entry[0].mal_id,
+                    })
+                  }>
+                  <Text
+                    style={{color: 'black', fontSize: 15, fontWeight: 'bold'}}>
+                    {item.entry[0].title}
+                  </Text>
+                </TouchableOpacity>
+              </ImageBackground>
+            )}
+          />
 
-            <FlatList
-              data={data}
-              horizontal={true}
-              keyExtractor={({mal_id}, index) => mal_id}
-              renderItem={({item}) => (    
-
-                
-          <ImageBackground
-          source={{uri:item.entry[0].images.webp.large_image_url}}
-            style={{height: 260, width: 410}}>
-              
-              <TouchableOpacity
-            style={{
-              backgroundColor: 'white',
-              paddingVertical: 7,
-              paddingHorizontal: 76,
-              top:135,
-              borderRadius:25,
-              borderWidth:1,borderStyle:'solid',alignItems:'center',alignContent:'center'
-            }}
-            onPress={() => navigation.navigate('MenuDeskripsi', {
-              mal_id:item.entry[0].mal_id
-            })}>
-            <Text style={{color: 'black', fontSize: 15, fontWeight: 'bold'}}>
-            {item.entry[0].title}
-            </Text>
-          </TouchableOpacity>
-          
-
-              </ImageBackground> )}
-            />
-
-              {/* <ImageBackground
+          {/* <ImageBackground
             source={require('../image/Manga1/skdaysbg.png')}
             style={{height: 260, width: 410}}>
               <View style={{paddingTop:137,paddingLeft:10}}>
@@ -172,7 +186,6 @@ const MenuHome = ({navigation}) => {
               </Text>
               </View>
               </ImageBackground> */}
-
         </ScrollView>
         <ScrollView>
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
@@ -191,48 +204,59 @@ const MenuHome = ({navigation}) => {
             <FlatList
               data={data}
               horizontal={true}
-              keyExtractor={(item) => item.entry}
+              keyExtractor={item => item.entry}
               renderItem={({item}) => (
                 <View
-                style={{
-                  marginRight: 12,
-                  marginVertical: 10,
-                }}>
-                <View style={{}}>
-                  <View style={{paddingLeft:35,paddingRight:15,marginRight:10}}>
-                  <ImageBackground
-                    source={{uri:item.entry[0].images.jpg.image_url}}
-                    style={{width: 110, height: 140}}></ImageBackground></View></View>
-          
+                  style={{
+                    backgroundColor: 'white',
+                    marginLeft: 16,
+                    marginVertical: 10,
+                  }}>
                   <View style={{}}>
-                    <View style={{ 
-                  paddingVertical: 0,
-                  paddingHorizontal:15,
-                  borderRadius: 0,}}>
+                    <View
+                      style={
+                        {
+                          // paddingLeft: 35,
+                          // paddingRight: 15,
+                          // marginRight: 10,
+                        }
+                      }>
+                      <ImageBackground
+                        source={{uri: item.entry[0].images.jpg.image_url}}
+                        style={{width: 110, height: 140}}></ImageBackground>
+                    </View>
+                  </View>
+
+                  <View style={{}}>
+                    <View
+                      style={{
+                        paddingVertical: 0,
+                        // paddingHorizontal: 15,
+                        borderRadius: 0,
+                      }}>
                       <Button
-                        title={item.entry[0].title}
+                        title={cutStr(item.entry[0].title, 9)}
+                        // title={item.entry[0].title}
                         color="#211D1D"
-                         onPress={() => navigation.navigate('MenuDeskripsi', {
-                           mal_id:item.entry[0].mal_id
-                         }
-                         )}
+                        onPress={() =>
+                          navigation.navigate('MenuDeskripsi', {
+                            mal_id: item.entry[0].mal_id,
+                          })
+                        }
                       />
                     </View>
                   </View>
                 </View>
-              
-              
               )}
             />
             <ScrollView
               horizontal={true}
               style={{
                 flexDirection: 'row',
-                // backgroundColor: 'pink',
+                backgroundColor: 'white',
                 marginHorizontal: 16,
                 paddingHorizontal: 3,
               }}>
-               
               <MangaA />
               <MangaB />
               <MangaC />
@@ -293,7 +317,7 @@ const MenuHome = ({navigation}) => {
               horizontal={true}
               style={{
                 flexDirection: 'row',
-                // backgroundColor: 'pink',
+                backgroundColor: 'white',
                 marginHorizontal: 16,
                 paddingHorizontal: 3,
               }}>
