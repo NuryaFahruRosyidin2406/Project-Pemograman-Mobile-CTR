@@ -261,7 +261,7 @@ const MenuHome = ({navigation}) => {
               horizontal={true}
               style={{
                 flexDirection: 'row',
-                backgroundColor: 'white',
+                // backgroundColor: 'white',
                 marginHorizontal: 16,
                 paddingHorizontal: 3,
               }}>
@@ -325,7 +325,7 @@ const MenuHome = ({navigation}) => {
               horizontal={true}
               style={{
                 flexDirection: 'row',
-                backgroundColor: 'white',
+                // backgroundColor: 'white',
                 marginHorizontal: 16,
                 paddingHorizontal: 3,
               }}>

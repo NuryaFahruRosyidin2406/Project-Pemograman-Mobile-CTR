@@ -75,20 +75,16 @@ function App({navigation}) {
           component={MenuBaca}
           options={{headerShown: false}}
         />
-        {/* <Stack.Screen
+        <Stack.Screen
           name="MenuGenre"
           component={MenuGenre}
           options={{headerShown: false}}
-        /> */}
+        />
         <Stack.Screen
           name="MenuDownload"
           component={MenuDownload}
           options={{headerShown: false}}
         />
-        
-        
-
-      
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -108,17 +104,6 @@ function BottomTabs() {
           tabBarIcon: ({color, size}) => (
             <Icon name="home-outline" color={color} size={size} />
           ),
-        }}
-      />
-      <Tab.Screen
-        name="MenuGenre"
-        component={MenuGenre}
-        options={{
-          // tabBarLabel: 'Genre',
-          headerShown: false,
-          // tabBarIcon: ({color, size}) => (
-          //   <Icon name="person-circle-outline" color={color} size={size} />
-          // ),
         }}
       />
       <Tab.Screen
