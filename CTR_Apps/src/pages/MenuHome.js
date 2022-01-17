@@ -114,7 +114,7 @@ const MenuHome = ({navigation}) => {
           style={{
             flexDirection: 'row',
             backgroundColor: 'white',
-            marginHorizontal: -2,
+            marginHorizontal: -8.5,
             paddingHorizontal: 0,
           }}>
           <FlatList
@@ -129,13 +129,14 @@ const MenuHome = ({navigation}) => {
                   style={{
                     backgroundColor: 'white',
                     paddingVertical: 7,
-                    paddingHorizontal: 76,
+                    marginHorizontal: 40,
                     top: 135,
                     borderRadius: 25,
                     borderWidth: 1,
                     borderStyle: 'solid',
                     alignItems: 'center',
                     alignContent: 'center',
+                    opacity: 0.5,
                   }}
                   onPress={() =>
                     navigation.navigate('MenuDeskripsi', {
@@ -143,7 +144,14 @@ const MenuHome = ({navigation}) => {
                     })
                   }>
                   <Text
-                    style={{color: 'black', fontSize: 15, fontWeight: 'bold'}}>
+                    style={{
+                      color: 'black',
+                      fontSize: 15,
+                      fontWeight: 'bold',
+                      opacity: 3,
+                      textShadowColor: 'black',
+                      textShadowRadius: 1,
+                    }}>
                     {item.entry[0].title}
                   </Text>
                 </TouchableOpacity>
