@@ -9,37 +9,42 @@ import {
   ImageBackground,
   TouchableOpacity
   ,Button,
-  FlatList
+  FlatList,
+  TextInput
 } from 'react-native';
+import { roundToNearestPixel } from 'react-native/Libraries/Utilities/PixelRatio';
 
 
 
 
-const MenuDeskripsi = ({navigation}) => {
-  const hotURL = "https://api.jikan.moe/v4/manga/23390";
+const MenuDeskripsi = ({route}) => {
+  
+  const hotURL = "https://api.jikan.moe/v4/manga/";
 
   // const [data, setData] = useState({});
   const [imgbg, setImgBg] = useState('');
   const [desc, setDesc] = useState('');
   const [title, setTitle] = useState('');
   const [img, setImg] = useState('');
-  const [genre, setGenre] = useState('');
-
+  const [genre, setGenre] = useState([]);
   
- fetch(hotURL)
+  useEffect(() => {
+    if(route.params?.mal_id){
+      fetch(hotURL+route.params.mal_id)
         .then(response => response.json())
         .then(json => {
           setImgBg(json.data.images.jpg.large_image_url)
           setDesc(json.data.synopsis)
           setTitle(json.data.title)
           setImg(json.data.images.jpg.image_url)
-          setGenre(json.data.authors[0].name)
+          setGenre(json.data.genres)
+          
          
         })
         .catch((error) => alert(error));
-
-
-
+    }
+  },);
+  
   return (
       <View style={{flex: 1}}>
         <ScrollView>
@@ -50,7 +55,7 @@ const MenuDeskripsi = ({navigation}) => {
             justifyContent: 'space-around',
             padding: 10,
           }}>
-          <Text style={{color: 'white', fontWeight: 'bold'}}>Diskripsi</Text>
+          <Text style={{color: 'white', fontWeight: 'bold'}}>Deskripsi</Text>
         </View>
         <View style={{flex: 1}}>
           <ImageBackground
@@ -86,15 +91,32 @@ const MenuDeskripsi = ({navigation}) => {
             </View>
 
 
-            <View style={{borderRadius:20,height:30,backgroundColor:'white'}}>
-                  <Text style={{color:'black'}}> {genre} </Text>
+            <View style={{borderRadius:20,height:30,backgroundColor:'white',borderBottomWidth:5,borderTopWidth:1}}>
+                  <Text style={{color:'black',top:4,left:15,fontSize:13,fontWeight:'500'}}> Genre : {genre.map(g => g.name).join(', ')} </Text>
             </View>
 
-            <View>
+            <View 
+            style={{flex:1,
+            backgroundColor:'#fff',
+            alignItems:'center',
+            justifyContent:'center',
+            borderWidth:1,
+            borderColor:'#777',
+            padding:8,
+            margin:10,
+            width:200,position:'relative'}}>
+
+              <TextInput placeholder=''></TextInput>
+
+            </View>
+
+            <View style={{paddingTop:10}}>
                 <Text style={{fontSize:12,textAlign:'justify',}}>{desc}
                 </Text>
                 </View>
 
+
+              
 
                <View style={{flexDirection:'column-reverse'}}>
                 <View style={{marginRight: 12, marginBottom: 15, marginLeft: 259}}>

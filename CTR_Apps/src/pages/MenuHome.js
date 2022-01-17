@@ -110,15 +110,30 @@ const MenuHome = ({navigation}) => {
               horizontal={true}
               keyExtractor={({mal_id}, index) => mal_id}
               renderItem={({item}) => (    
+
+                
           <ImageBackground
           source={{uri:item.entry[0].images.webp.large_image_url}}
             style={{height: 260, width: 410}}>
-              <View style={{paddingTop:140,paddingLeft:20}}>
-              <Text style={{color: 'black', fontWeight: 'bold', borderRadius:25,
-               height:30,
-               fontSize:20,borderWidth:3,backgroundColor:'white',paddingLeft:25}}>{item.entry[0].title}
-              </Text>
-              </View>
+              
+              <TouchableOpacity
+            style={{
+              backgroundColor: 'white',
+              paddingVertical: 7,
+              paddingHorizontal: 76,
+              top:135,
+              borderRadius:25,
+              borderWidth:1,borderStyle:'solid',alignItems:'center',alignContent:'center'
+            }}
+            onPress={() => navigation.navigate('MenuDeskripsi', {
+              mal_id:item.entry[0].mal_id
+            })}>
+            <Text style={{color: 'black', fontSize: 15, fontWeight: 'bold'}}>
+            {item.entry[0].title}
+            </Text>
+          </TouchableOpacity>
+          
+
               </ImageBackground> )}
             />
 
@@ -176,7 +191,7 @@ const MenuHome = ({navigation}) => {
             <FlatList
               data={data}
               horizontal={true}
-              keyExtractor={({mal_id}, index) => mal_id}
+              keyExtractor={(item) => item.entry}
               renderItem={({item}) => (
                 <View
                 style={{
@@ -197,7 +212,10 @@ const MenuHome = ({navigation}) => {
                       <Button
                         title={item.entry[0].title}
                         color="#211D1D"
-                         onPress={() => navigation.navigate('MenuDeskripsi')}
+                         onPress={() => navigation.navigate('MenuDeskripsi', {
+                           mal_id:item.entry[0].mal_id
+                         }
+                         )}
                       />
                     </View>
                   </View>
