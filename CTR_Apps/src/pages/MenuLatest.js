@@ -188,7 +188,6 @@ const MenuLatest = ({navigation}) => {
               GENRE
             </Text>
           </TouchableOpacity>
-
         </View>
         {/* Bagian Home dan Latest */}
         <ScrollView>
@@ -197,66 +196,66 @@ const MenuLatest = ({navigation}) => {
             {/* <FlatList
               data={manga}
               renderItem={({item}) => ( */}
-                <View
-                  style={{
-                    backgroundColor: '#BCBCBC',
-                    // paddingTop: 95,
-                    // paddingBottom: 95,
-                  }}>
-                  <ImageBackground
-                    source={require('../image/Manga1/skdaysbg.png')}
-                    style={{height: 207, width: 400}}>
-                    <View style={{marginLeft: 8}}>
-                      <Text
-                        style={{
-                          fontWeight: 'bold',
-                          color: 'white',
-                          fontSize: 25,
-                          paddingTop: 170,
-                        }}>
-                        {/* {item.title} */}asd
-                      </Text>
-                    </View>
-                  </ImageBackground>
-                  <View
+            <View
+              style={{
+                backgroundColor: '#BCBCBC',
+                // paddingTop: 95,
+                // paddingBottom: 95,
+              }}>
+              <ImageBackground
+                source={require('../image/Manga1/skdaysbg.png')}
+                style={{height: 207, width: 400}}>
+                <View style={{marginLeft: 8}}>
+                  <Text
                     style={{
-                      marginTop: 25,
-                      marginHorizontal: 12,
-                      marginBottom: 15,
+                      fontWeight: 'bold',
+                      color: 'white',
+                      fontSize: 25,
+                      paddingTop: 170,
                     }}>
-                    <View style={{}}>
-                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {/* {item.sinopsis} */}asd
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      marginRight: 12,
-                      marginBottom: 15,
-                      marginLeft: 225,
-                    }}>
-                    <TouchableOpacity
-                      style={{
-                        backgroundColor: '#383232',
-                        paddingVertical: 10,
-                        paddingHorizontal: 15,
-                        borderRadius: 20,
-                      }}
-                      onPress={() => navigation.navigate('MenuDeskripsi')}>
-                      <Text
-                        style={{
-                          color: 'white',
-                          fontSize: 17,
-                          fontWeight: 'bold',
-                          textAlign: 'center',
-                        }}>
-                        Chapter 1
-                      </Text>
-                    </TouchableOpacity>
-                  </View>
+                    {/* {item.title} */}asd
+                  </Text>
                 </View>
-              {/* )}
+              </ImageBackground>
+              <View
+                style={{
+                  marginTop: 25,
+                  marginHorizontal: 12,
+                  marginBottom: 15,
+                }}>
+                <View style={{}}>
+                  <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                    {/* {item.sinopsis} */}asd
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={{
+                  marginRight: 12,
+                  marginBottom: 15,
+                  marginLeft: 225,
+                }}>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: '#383232',
+                    paddingVertical: 10,
+                    paddingHorizontal: 15,
+                    borderRadius: 20,
+                  }}
+                  onPress={() => navigation.navigate('MenuBaca')}>
+                  <Text
+                    style={{
+                      color: 'white',
+                      fontSize: 17,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                    }}>
+                    Chapter 1
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+            {/* )}
             /> */}
           </View>
           {/* Manga Sakamoto */}
@@ -265,67 +264,67 @@ const MenuLatest = ({navigation}) => {
             {/* <FlatList
               data={manga2}
               renderItem={({item}) => ( */}
-                <View
-                  style={{
-                    backgroundColor: '#BCBCBC',
-                    paddingBottom: 10,
-                    // paddingTop: 95,
-                    // paddingBottom: 95,
-                  }}>
-                  <ImageBackground
-                    source={require('../image/Manga2/tokyoRevengerbg.png')}
-                    style={{height: 207, width: 400}}>
-                    <View style={{marginLeft: 8}}>
-                      <Text
-                        style={{
-                          fontWeight: 'bold',
-                          color: 'white',
-                          fontSize: 25,
-                          paddingTop: 170,
-                        }}>
-                        {/* {item.title} */}asd
-                      </Text>
-                    </View>
-                  </ImageBackground>
-                  <View
+            <View
+              style={{
+                backgroundColor: '#BCBCBC',
+                paddingBottom: 10,
+                // paddingTop: 95,
+                // paddingBottom: 95,
+              }}>
+              <ImageBackground
+                source={require('../image/Manga2/tokyoRevengerbg.png')}
+                style={{height: 207, width: 400}}>
+                <View style={{marginLeft: 8}}>
+                  <Text
                     style={{
-                      marginTop: 25,
-                      marginHorizontal: 12,
-                      marginBottom: 15,
+                      fontWeight: 'bold',
+                      color: 'white',
+                      fontSize: 25,
+                      paddingTop: 170,
                     }}>
-                    <View>
-                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {/* {item.sinopsis} */}asd
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      marginRight: 12,
-                      marginBottom: 15,
-                      marginLeft: 225,
-                    }}>
-                    <TouchableOpacity
-                      style={{
-                        backgroundColor: '#383232',
-                        paddingVertical: 10,
-                        paddingHorizontal: 15,
-                        borderRadius: 20,
-                      }}
-                      onPress={() => navigation.navigate('MenuDeskripsi')}>
-                      <Text
-                        style={{
-                          color: 'white',
-                          fontSize: 17,
-                          fontWeight: 'bold',
-                          textAlign: 'center',
-                        }}>
-                        Chapter 1
-                      </Text>
-                    </TouchableOpacity>
-                  </View>
+                    {/* {item.title} */}asd
+                  </Text>
                 </View>
-              {/* )}
+              </ImageBackground>
+              <View
+                style={{
+                  marginTop: 25,
+                  marginHorizontal: 12,
+                  marginBottom: 15,
+                }}>
+                <View>
+                  <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                    {/* {item.sinopsis} */}asd
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={{
+                  marginRight: 12,
+                  marginBottom: 15,
+                  marginLeft: 225,
+                }}>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: '#383232',
+                    paddingVertical: 10,
+                    paddingHorizontal: 15,
+                    borderRadius: 20,
+                  }}
+                  onPress={() => navigation.navigate('MenuBaca')}>
+                  <Text
+                    style={{
+                      color: 'white',
+                      fontSize: 17,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                    }}>
+                    Chapter 1
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+            {/* )}
             /> */}
           </View>
           {/* Manga Tokyo Revengers */}
@@ -334,270 +333,270 @@ const MenuLatest = ({navigation}) => {
             {/* <FlatList
               data={manga3}
               renderItem={({item}) => ( */}
-                <View
-                  style={{
-                    backgroundColor: '#BCBCBC',
-                    // paddingTop: 95,
-                    // paddingBottom: 95,
-                  }}>
-                  <ImageBackground
-                    source={require('../image/Manga3/jujutsubg1.png')}
-                    style={{height: 207, width: 400}}>
-                    <View style={{marginLeft: 8}}>
-                      <Text
-                        style={{
-                          fontWeight: 'bold',
-                          color: 'white',
-                          fontSize: 25,
-                          paddingTop: 170,
-                        }}>
-                        {/* {item.title} */}asd
-                      </Text>
-                    </View>
-                  </ImageBackground>
-                  <View
+            <View
+              style={{
+                backgroundColor: '#BCBCBC',
+                // paddingTop: 95,
+                // paddingBottom: 95,
+              }}>
+              <ImageBackground
+                source={require('../image/Manga3/jujutsubg1.png')}
+                style={{height: 207, width: 400}}>
+                <View style={{marginLeft: 8}}>
+                  <Text
                     style={{
-                      marginTop: 25,
-                      marginHorizontal: 12,
-                      marginBottom: 15,
+                      fontWeight: 'bold',
+                      color: 'white',
+                      fontSize: 25,
+                      paddingTop: 170,
                     }}>
-                    <View>
-                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {/* {item.sinopsis} */}asd
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      marginRight: 12,
-                      marginBottom: 15,
-                      marginLeft: 225,
-                    }}>
-                    <TouchableOpacity
-                      style={{
-                        backgroundColor: '#383232',
-                        paddingVertical: 10,
-                        paddingHorizontal: 15,
-                        borderRadius: 20,
-                      }}
-                      onPress={() => navigation.navigate('MenuDeskripsi')}>
-                      <Text
-                        style={{
-                          color: 'white',
-                          fontSize: 17,
-                          fontWeight: 'bold',
-                          textAlign: 'center',
-                        }}>
-                        Chapter 1
-                      </Text>
-                    </TouchableOpacity>
-                  </View>
+                    {/* {item.title} */}asd
+                  </Text>
                 </View>
-              {/* )}
+              </ImageBackground>
+              <View
+                style={{
+                  marginTop: 25,
+                  marginHorizontal: 12,
+                  marginBottom: 15,
+                }}>
+                <View>
+                  <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                    {/* {item.sinopsis} */}asd
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={{
+                  marginRight: 12,
+                  marginBottom: 15,
+                  marginLeft: 225,
+                }}>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: '#383232',
+                    paddingVertical: 10,
+                    paddingHorizontal: 15,
+                    borderRadius: 20,
+                  }}
+                  onPress={() => navigation.navigate('MenuBaca')}>
+                  <Text
+                    style={{
+                      color: 'white',
+                      fontSize: 17,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                    }}>
+                    Chapter 1
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+            {/* )}
             /> */}
           </View>
           {/* Manga Jujutsu Kaisen */}
           {/* Manga Baki 4 */}
           <View>
             {/* <FlatList */}
-              {/* data={manga4} */}
-              {/* renderItem={({item}) => ( */}
-                <View
-                  style={{
-                    backgroundColor: '#BCBCBC',
-                    // paddingTop: 95,
-                    // paddingBottom: 95,
-                  }}>
-                  <ImageBackground
-                    source={require('../image/image19.png')}
-                    style={{height: 207, width: 400}}>
-                    <View style={{marginLeft: 8}}>
-                      <Text
-                        style={{
-                          fontWeight: 'bold',
-                          color: 'white',
-                          fontSize: 20,
-                          paddingTop: 170,
-                        }}>
-                        {/* {item.title} */}asd
-                      </Text>
-                    </View>
-                  </ImageBackground>
-                  <View
+            {/* data={manga4} */}
+            {/* renderItem={({item}) => ( */}
+            <View
+              style={{
+                backgroundColor: '#BCBCBC',
+                // paddingTop: 95,
+                // paddingBottom: 95,
+              }}>
+              <ImageBackground
+                source={require('../image/image19.png')}
+                style={{height: 207, width: 400}}>
+                <View style={{marginLeft: 8}}>
+                  <Text
                     style={{
-                      marginTop: 25,
-                      marginHorizontal: 12,
-                      marginBottom: 15,
+                      fontWeight: 'bold',
+                      color: 'white',
+                      fontSize: 20,
+                      paddingTop: 170,
                     }}>
-                    <View>
-                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {/* {item.sinopsis} */}asd
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      marginRight: 12,
-                      marginBottom: 15,
-                      marginLeft: 225,
-                    }}>
-                    <TouchableOpacity
-                      style={{
-                        backgroundColor: '#383232',
-                        paddingVertical: 10,
-                        paddingHorizontal: 15,
-                        borderRadius: 20,
-                      }}
-                      onPress={() => navigation.navigate('MenuDeskripsi')}>
-                      <Text
-                        style={{
-                          color: 'white',
-                          fontSize: 17,
-                          fontWeight: 'bold',
-                          textAlign: 'center',
-                        }}>
-                        Chapter 1
-                      </Text>
-                    </TouchableOpacity>
-                  </View>
+                    {/* {item.title} */}asd
+                  </Text>
                 </View>
-              {/* )} */}
+              </ImageBackground>
+              <View
+                style={{
+                  marginTop: 25,
+                  marginHorizontal: 12,
+                  marginBottom: 15,
+                }}>
+                <View>
+                  <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                    {/* {item.sinopsis} */}asd
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={{
+                  marginRight: 12,
+                  marginBottom: 15,
+                  marginLeft: 225,
+                }}>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: '#383232',
+                    paddingVertical: 10,
+                    paddingHorizontal: 15,
+                    borderRadius: 20,
+                  }}
+                  onPress={() => navigation.navigate('MenuBaca')}>
+                  <Text
+                    style={{
+                      color: 'white',
+                      fontSize: 17,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                    }}>
+                    Chapter 1
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+            {/* )} */}
             {/* /> */}
           </View>
           {/* Manga Baki */}
           {/* Manga Solo Leveling 5*/}
           <View>
             {/* <FlatList */}
-              {/* data={manga5} */}
-              {/* renderItem={({item}) => ( */}
-                <View
-                  style={{
-                    backgroundColor: '#BCBCBC',
-                    // paddingTop: 95,
-                    // paddingBottom: 95,
-                  }}>
-                  <ImageBackground
-                    source={require('../image/Manga4/sololvlingbg.jpg')}
-                    style={{height: 207, width: 400}}>
-                    <View style={{marginLeft: 8}}>
-                      <Text
-                        style={{
-                          fontWeight: 'bold',
-                          color: 'white',
-                          fontSize: 20,
-                          paddingTop: 170,
-                        }}>
-                        {/* {item.title} */}asd
-                      </Text>
-                    </View>
-                  </ImageBackground>
-                  <View
+            {/* data={manga5} */}
+            {/* renderItem={({item}) => ( */}
+            <View
+              style={{
+                backgroundColor: '#BCBCBC',
+                // paddingTop: 95,
+                // paddingBottom: 95,
+              }}>
+              <ImageBackground
+                source={require('../image/Manga4/sololvlingbg.jpg')}
+                style={{height: 207, width: 400}}>
+                <View style={{marginLeft: 8}}>
+                  <Text
                     style={{
-                      marginTop: 25,
-                      marginHorizontal: 12,
-                      marginBottom: 15,
+                      fontWeight: 'bold',
+                      color: 'white',
+                      fontSize: 20,
+                      paddingTop: 170,
                     }}>
-                    <View>
-                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {/* {item.sinopsis} */}asd
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      marginRight: 12,
-                      marginBottom: 15,
-                      marginLeft: 225,
-                    }}>
-                    <TouchableOpacity
-                      style={{
-                        backgroundColor: '#383232',
-                        paddingVertical: 10,
-                        paddingHorizontal: 15,
-                        borderRadius: 20,
-                      }}
-                      onPress={() => navigation.navigate('MenuDeskripsi')}>
-                      <Text
-                        style={{
-                          color: 'white',
-                          fontSize: 17,
-                          fontWeight: 'bold',
-                          textAlign: 'center',
-                        }}>
-                        Chapter 1
-                      </Text>
-                    </TouchableOpacity>
-                  </View>
+                    {/* {item.title} */}asd
+                  </Text>
                 </View>
-              {/*  )} */}
+              </ImageBackground>
+              <View
+                style={{
+                  marginTop: 25,
+                  marginHorizontal: 12,
+                  marginBottom: 15,
+                }}>
+                <View>
+                  <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                    {/* {item.sinopsis} */}asd
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={{
+                  marginRight: 12,
+                  marginBottom: 15,
+                  marginLeft: 225,
+                }}>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: '#383232',
+                    paddingVertical: 10,
+                    paddingHorizontal: 15,
+                    borderRadius: 20,
+                  }}
+                  onPress={() => navigation.navigate('MenuBaca')}>
+                  <Text
+                    style={{
+                      color: 'white',
+                      fontSize: 17,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                    }}>
+                    Chapter 1
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+            {/*  )} */}
             {/*  /> */}
           </View>
           {/* Manga Solo Leveling */}
           {/* Manga Kimetsu No Yaiba 6*/}
           <View>
             {/* <FlatList */}
-              {/* data={manga6} */}
-              {/* renderItem={({item}) => ( */}
-                <View
-                  style={{
-                    backgroundColor: '#BCBCBC',
-                    // paddingTop: 95,
-                    // paddingBottom: 95,
-                  }}>
-                  <ImageBackground
-                    source={require('../image/Manga5/kmybg.jpg')}
-                    style={{height: 207, width: 400}}>
-                    <View style={{marginLeft: 8}}>
-                      <Text
-                        style={{
-                          fontWeight: 'bold',
-                          color: 'white',
-                          fontSize: 20,
-                          paddingTop: 170,
-                        }}>
-                        {/* {item.title} */}asd
-                      </Text>
-                    </View>
-                  </ImageBackground>
-                  <View
+            {/* data={manga6} */}
+            {/* renderItem={({item}) => ( */}
+            <View
+              style={{
+                backgroundColor: '#BCBCBC',
+                // paddingTop: 95,
+                // paddingBottom: 95,
+              }}>
+              <ImageBackground
+                source={require('../image/Manga5/kmybg.jpg')}
+                style={{height: 207, width: 400}}>
+                <View style={{marginLeft: 8}}>
+                  <Text
                     style={{
-                      marginTop: 25,
-                      marginHorizontal: 12,
-                      marginBottom: 15,
+                      fontWeight: 'bold',
+                      color: 'white',
+                      fontSize: 20,
+                      paddingTop: 170,
                     }}>
-                    <View>
-                      <Text style={{fontSize: 12, textAlign: 'justify'}}>
-                        {/* {item.sinopsis} */}asd
-                      </Text>
-                    </View>
-                  </View>
-                  <View
-                    style={{
-                      marginRight: 12,
-                      marginBottom: 15,
-                      marginLeft: 225,
-                    }}>
-                    <TouchableOpacity
-                      style={{
-                        backgroundColor: '#383232',
-                        paddingVertical: 10,
-                        paddingHorizontal: 15,
-                        borderRadius: 20,
-                      }}
-                      onPress={() => navigation.navigate('MenuDeskripsi')}>
-                      <Text
-                        style={{
-                          color: 'white',
-                          fontSize: 17,
-                          fontWeight: 'bold',
-                          textAlign: 'center',
-                        }}>
-                        Chapter 1
-                      </Text>
-                    </TouchableOpacity>
-                  </View>
+                    {/* {item.title} */}asd
+                  </Text>
                 </View>
-              {/* )} */}
+              </ImageBackground>
+              <View
+                style={{
+                  marginTop: 25,
+                  marginHorizontal: 12,
+                  marginBottom: 15,
+                }}>
+                <View>
+                  <Text style={{fontSize: 12, textAlign: 'justify'}}>
+                    {/* {item.sinopsis} */}asd
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={{
+                  marginRight: 12,
+                  marginBottom: 15,
+                  marginLeft: 225,
+                }}>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: '#383232',
+                    paddingVertical: 10,
+                    paddingHorizontal: 15,
+                    borderRadius: 20,
+                  }}
+                  onPress={() => navigation.navigate('MenuBaca')}>
+                  <Text
+                    style={{
+                      color: 'white',
+                      fontSize: 17,
+                      fontWeight: 'bold',
+                      textAlign: 'center',
+                    }}>
+                    Chapter 1
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+            {/* )} */}
             {/* /> */}
           </View>
           {/* Manga Kimetsu No Yaiba */}
