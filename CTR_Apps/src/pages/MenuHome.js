@@ -221,14 +221,7 @@ const MenuHome = ({navigation}) => {
                     marginVertical: 10,
                   }}>
                   <View style={{}}>
-                    <View
-                      style={
-                        {
-                          // paddingLeft: 35,
-                          // paddingRight: 15,
-                          // marginRight: 10,
-                        }
-                      }>
+                    <View style={{}}>
                       <ImageBackground
                         source={{uri: item.entry[0].images.jpg.image_url}}
                         style={{width: 110, height: 140}}></ImageBackground>
@@ -257,25 +250,6 @@ const MenuHome = ({navigation}) => {
                 </View>
               )}
             />
-            <ScrollView
-              horizontal={true}
-              style={{
-                flexDirection: 'row',
-                // backgroundColor: 'white',
-                marginHorizontal: 16,
-                paddingHorizontal: 3,
-              }}>
-              <MangaA />
-              <MangaB />
-              <MangaC />
-              <MangaD />
-              <MangaE />
-              <MangaF />
-              <MangaG />
-              <MangaH />
-              <MangaI />
-              <MangaJ />
-            </ScrollView>
           </View>
           <View>
             <View>
@@ -289,25 +263,50 @@ const MenuHome = ({navigation}) => {
                 RECOMMENDED
               </Text>
             </View>
-            <ScrollView
-              horizontal={true}
-              style={{
-                flexDirection: 'row',
-                marginHorizontal: 16,
-                paddingHorizontal: 3,
-              }}>
-              <MangaA />
-              <MangaB />
-              <MangaC />
-              <MangaD />
-              <MangaE />
-              <MangaF />
-              <MangaG />
-              <MangaH />
-              <MangaI />
-              <MangaJ />
-            </ScrollView>
           </View>
+
+          <FlatList
+            data={data}
+            horizontal={true}
+            keyExtractor={item => item.entry}
+            renderItem={({item}) => (
+              <View
+                style={{
+                  backgroundColor: 'white',
+                  marginLeft: 16,
+                  marginVertical: 10,
+                }}>
+                <View style={{}}>
+                  <View style={{}}>
+                    <ImageBackground
+                      source={{uri: item.entry[0].images.jpg.image_url}}
+                      style={{width: 110, height: 140}}></ImageBackground>
+                  </View>
+                </View>
+
+                <View style={{}}>
+                  <View
+                    style={{
+                      paddingVertical: 0,
+                      // paddingHorizontal: 15,
+                      borderRadius: 0,
+                    }}>
+                    <Button
+                      title={cutStr(item.entry[0].title, 9)}
+                      // title={item.entry[0].title}
+                      color="#211D1D"
+                      onPress={() =>
+                        navigation.navigate('MenuDeskripsi', {
+                          mal_id: item.entry[0].mal_id,
+                        })
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            )}
+          />
+
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
             <View>
               <Text
