@@ -265,6 +265,7 @@ const MenuDeskripsi = ({route, navigation}) => {
               <Text
                 style={{
                   fontSize: 15,
+                  color: '#646464',
                   textAlign: 'justify',
                   fontWeight: '500',
                   textShadowColor: 'black',

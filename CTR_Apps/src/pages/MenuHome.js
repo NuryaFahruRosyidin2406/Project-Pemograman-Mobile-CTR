@@ -158,42 +158,6 @@ const MenuHome = ({navigation}) => {
               </ImageBackground>
             )}
           />
-
-          {/* <ImageBackground
-            source={require('../image/Manga1/skdaysbg.png')}
-            style={{height: 260, width: 410}}>
-              <View style={{paddingTop:137,paddingLeft:10}}>
-              <Text style={{color: 'white', fontWeight: 'bold',fontSize:30}}>Sakamoto Days
-              </Text>
-              </View>
-              </ImageBackground>
-            
-              <ImageBackground
-            source={require('../image/Manga2/tokyoRevengerbg.png')}
-            style={{height: 260, width: 410}}>
-              <View style={{paddingTop:137,paddingLeft:10}}>
-              <Text style={{color: 'white', fontWeight: 'bold',fontSize:30}}>Tokyo Revanger
-              </Text>
-              </View>
-              </ImageBackground>
-
-              <ImageBackground
-            source={require('../image/Manga4/sololvlingbg.jpg')}
-            style={{height: 260, width: 410}}>
-              <View style={{paddingTop:137,paddingLeft:10}}>
-              <Text style={{color: 'white', fontWeight: 'bold',fontSize:30}}>solo leveling
-              </Text>
-              </View>
-              </ImageBackground>
-
-              <ImageBackground
-            source={require('../image/Manga5/kmybg.jpg')}
-            style={{height: 260, width: 410}}>
-              <View style={{paddingTop:137,paddingLeft:10}}>
-              <Text style={{color: 'white', fontWeight: 'bold',fontSize:30}}>Kimetsu no yaiba
-              </Text>
-              </View>
-              </ImageBackground> */}
         </ScrollView>
         <ScrollView>
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
@@ -228,24 +192,22 @@ const MenuHome = ({navigation}) => {
                     </View>
                   </View>
 
-                  <View style={{}}>
-                    <View
-                      style={{
-                        paddingVertical: 0,
-                        // paddingHorizontal: 15,
-                        borderRadius: 0,
-                      }}>
-                      <Button
-                        title={cutStr(item.entry[0].title, 9)}
-                        // title={item.entry[0].title}
-                        color="#211D1D"
-                        onPress={() =>
-                          navigation.navigate('MenuDeskripsi', {
-                            mal_id: item.entry[0].mal_id,
-                          })
-                        }
-                      />
-                    </View>
+                  <View
+                    style={{
+                      paddingVertical: 0,
+                      // paddingHorizontal: 15,
+                      borderRadius: 0,
+                    }}>
+                    <Button
+                      title={cutStr(item.entry[0].title, 9)}
+                      // title={item.entry[0].title}
+                      color="#211D1D"
+                      onPress={() =>
+                        navigation.navigate('MenuDeskripsi', {
+                          mal_id: item.entry[0].mal_id,
+                        })
+                      }
+                    />
                   </View>
                 </View>
               )}
@@ -259,6 +221,7 @@ const MenuHome = ({navigation}) => {
                   color: 'black',
                   fontSize: 20,
                   textAlign: 'center',
+                  paddingTop: 15,
                 }}>
                 RECOMMENDED
               </Text>
@@ -284,24 +247,22 @@ const MenuHome = ({navigation}) => {
                   </View>
                 </View>
 
-                <View style={{}}>
-                  <View
-                    style={{
-                      paddingVertical: 0,
-                      // paddingHorizontal: 15,
-                      borderRadius: 0,
-                    }}>
-                    <Button
-                      title={cutStr(item.entry[0].title, 9)}
-                      // title={item.entry[0].title}
-                      color="#211D1D"
-                      onPress={() =>
-                        navigation.navigate('MenuDeskripsi', {
-                          mal_id: item.entry[0].mal_id,
-                        })
-                      }
-                    />
-                  </View>
+                <View
+                  style={{
+                    paddingVertical: 0,
+                    // paddingHorizontal: 15,
+                    borderRadius: 0,
+                  }}>
+                  <Button
+                    title={cutStr(item.entry[0].title, 9)}
+                    // title={item.entry[0].title}
+                    color="#211D1D"
+                    onPress={() =>
+                      navigation.navigate('MenuDeskripsi', {
+                        mal_id: item.entry[0].mal_id,
+                      })
+                    }
+                  />
                 </View>
               </View>
             )}
