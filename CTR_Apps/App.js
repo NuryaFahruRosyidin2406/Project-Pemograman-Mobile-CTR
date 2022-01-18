@@ -75,11 +75,11 @@ function App({navigation}) {
           component={MenuBaca}
           options={{headerShown: false}}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="MenuGenre"
           component={MenuGenre}
           options={{headerShown: false}}
-        />
+        /> */}
         <Stack.Screen
           name="MenuDownload"
           component={MenuDownload}

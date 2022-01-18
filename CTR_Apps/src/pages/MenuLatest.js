@@ -177,7 +177,7 @@ const MenuLatest = ({navigation}) => {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={{
               backgroundColor: '#383232',
               paddingVertical: 7,
@@ -187,7 +187,7 @@ const MenuLatest = ({navigation}) => {
             <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
               GENRE
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
         {/* Bagian Home dan Latest */}
         <ScrollView>
